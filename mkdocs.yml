@@ -1,0 +1,7 @@
+site_name: Flashreads
+theme:
+  name: material
+  palette:
+    primary: light blue
+markdown_extensions:
+  - meta
