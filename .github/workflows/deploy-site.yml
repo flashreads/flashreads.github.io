@@ -15,9 +15,6 @@ jobs:
           pip install -r requirements.txt
           git checkout https://github.com/flashreads/blogs.git docs
           mkdocs build -d public
-        with:
-          python-version: '3.8'
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
