@@ -5,3 +5,5 @@ theme:
     primary: light blue
 markdown_extensions:
   - meta
+  - codehilite
+  - admonition
