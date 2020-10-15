@@ -856,23 +856,25 @@
                   <h1>What is Doctype in HTML?</h1>
                 
                 <p>The DOCTYPE as the name indicates describes the type of the document that would be used so the web browser, web crawler or other client tools can know what type to expect e.g </p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Website Title&lt;/title&gt;
-&lt;/head&gt;
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Website Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;body&gt;
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
  The website body
-&lt;/body&gt;
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-&lt;/html&gt;
-</code></pre>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
 <p>This means that it is HTML5. The <code>&lt;!DOCTYPE html&gt;</code> is not an HTML tag it is just the information to the consumer so it knows how to parses the HTML. 
 Web browsers are also using <code>&lt;!DOCTYPE html&gt;</code> to found out which mode to use for rendering the web page (quirks mode, almost standards mode, and full standards mode). The main idea of the modes is to make old web pages compatible in the new browsers that are following W3C standards. Check out this https://en.wikipedia.org/wiki/Quirks_mode#Comparison_of_document_types article for the difference in the rendering modes. 
 Sometimes you can find other <code>DOCTYPE</code> declarations. Those are for old versions of HTML, so other declarations were used e.g in HTML 4:</p>
-<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span>
+</code></pre></div>
+
 <p>This declaration looks more complicated because it contains the document type definition. For the full list of Doctype declarations check out <a href="https://www.w3.org/QA/2002/04/valid-dtd-list.html">W3 list</a>.</p>
                 
                   

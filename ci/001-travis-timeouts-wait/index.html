@@ -856,23 +856,28 @@
                   <h1>How to increase Travis CI timeout?</h1>
                 
                 <p>There are different use cases where Travis jobs could raise the timeout error. Maybe you are trying to install a Python module that takes some time before installing the dependencies e.g:</p>
-<pre><code class="language-yml">install:
-    pip install torch
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">install</span><span class="o">:</span>
+    <span class="n">pip</span> <span class="n">install</span> <span class="n">torch</span>
+</code></pre></div>
+
 <p>or you are running the Java project tests e.g</p>
-<pre><code class="language-yml">script:
-    mvn package -Dtestng=test.xml
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">script</span><span class="o">:</span>
+    <span class="n">mvn</span> <span class="kd">package</span> <span class="o">-</span><span class="n">Dtestng</span><span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="na">xml</span>
+</code></pre></div>
+
 <p>or pushing a new image to the Docker registry e.g</p>
-<pre><code class="language-yml">script:
-    docker push $APPLICATION:$IMAGE_VERSION;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">script</span><span class="o">:</span>
+    <span class="n">docker</span> <span class="n">push</span> <span class="n">$APPLICATION</span><span class="o">:</span><span class="n">$IMAGE_VERSION</span><span class="o">;</span>
+</code></pre></div>
+
 <p>The default Travis job timeout is set to 10 min, so in some scenarios the above commands will fail with:</p>
-<pre><code>Timeout (20 minutes) reached. Terminating &quot;...&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">Timeout (20 minutes) reached. Terminating &quot;...&quot;</span>
+</code></pre></div>
+
 <p>To increase the <code>timeouts</code> travis ci offers a <a href="https://docs.travis-ci.com/user/common-build-problems/#build-times-out-because-no-output-was-received">function</a> that will increase the build timeouts:</p>
-<pre><code class="language-yml">install: travis_wait N mvn install
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">install</span><span class="o">:</span> <span class="n">travis_wait</span> <span class="n">N</span> <span class="n">mvn</span> <span class="n">install</span>
+</code></pre></div>
+
 <p>The <code>travis_wait n</code>  where the <code>n</code> is the minutes by which the waiting time is increased.</p>
 <blockquote>
 <p>Note: You must carefully use <code>travis_wait</code> since it can extend the build time when there could happen another issue.</p>

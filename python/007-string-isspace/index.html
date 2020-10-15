@@ -860,46 +860,52 @@ The best use case of this method is to check if the string contains characters a
 <ul>
 <li>'\n' - new line</li>
 </ul>
-<pre><code class="language-python">mystring = '\n'
-mystring.isspace()
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <ul>
 <li>' ' - whitespace</li>
 </ul>
-<pre><code class="language-python">mystring = ' '
-mystring.isspace()
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <ul>
 <li>'\t' - tab</li>
 </ul>
-<pre><code class="language-python">mystring = '\t'
-mystring.isspace()
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <ul>
 <li>'\r' - carriage return</li>
 </ul>
-<pre><code class="language-python">mystring = '\r'
-mystring.isspace()
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <ul>
 <li>'\f' - form feed</li>
 </ul>
-<pre><code class="language-python">mystring = '\f'
-mystring.isspace()
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\f</span><span class="s1">&#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <p>Or combination:</p>
-<pre><code class="language-python">mystring = ' \t'
-anotherstring = '\n\t'
-mystring.isspace()
-anotherstring.isspace()
-&gt;&gt;&gt;True
-&gt;&gt;&gt;True
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39; </span><span class="se">\t</span><span class="s1">&#39;</span>
+<span class="n">anotherstring</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n\t</span><span class="s1">&#39;</span>
+<span class="n">mystring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="n">anotherstring</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span><span class="kc">True</span>
+</code></pre></div>
+
 <blockquote>
 <p>Note that <code>isspace()</code> will not return True for '', so always check with <code>not mystring or mystring.isspace()</code>.</p>
 </blockquote>

@@ -933,21 +933,24 @@
 <p>The Windows version of PyTorch was never uploaded to PyPi because of the binary size limits. 
 When installing it you will end up getting the <code>RuntimeError: PyTorch does not currently provide packages for PyPI</code> error.
 To successfully install with pip you need to specify the URL locations to the PyTorch wheel: </p>
-<pre><code>pip install torch===1.5.0 torchvision===0.6.0 -f https://download.pytorch.org/whl/torch_stable.html
+<div class="codehilite"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">torch</span><span class="o">===</span><span class="mf">1.5</span><span class="o">.</span><span class="mi">0</span> <span class="n">torchvision</span><span class="o">===</span><span class="mf">0.6</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">f</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">torch_stable</span><span class="o">.</span><span class="n">html</span>
+</code></pre></div>
 
-</code></pre>
 <blockquote>
 <p>Note that this will install the PyTorch with <a href="https://en.wikipedia.org/wiki/CUDA">CUDA</a>. If your system hasn't an NVIDIA GPU  install the CPU version instead:</p>
 </blockquote>
-<pre><code>pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">torch</span><span class="o">==</span><span class="mf">1.5</span><span class="o">.</span><span class="mi">0</span><span class="o">+</span><span class="n">cpu</span> <span class="n">torchvision</span><span class="o">==</span><span class="mf">0.6</span><span class="o">.</span><span class="mi">0</span><span class="o">+</span><span class="n">cpu</span> <span class="o">-</span><span class="n">f</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">torch_stable</span><span class="o">.</span><span class="n">html</span>
+</code></pre></div>
+
 <h2 id="install-pytorch-with-conda">Install Pytorch with Conda</h2>
 <p>The <a href="https://docs.conda.io/en/latest/">Conda</a> installation is straight forward:</p>
-<pre><code>conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span> <span class="n">torchvision</span> <span class="n">cudatoolkit</span><span class="o">=</span><span class="mf">10.2</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
+</code></pre></div>
+
 <p>and without CUDA:</p>
-<pre><code>conda install pytorch torchvision cpuonly -c pytorch
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">conda install pytorch torchvision cpuonly -c pytorch</span>
+</code></pre></div>
+
 <p>For additional installation options as LibTorch or installation from Source check the <code>Start Locally</code> guide at https://pytorch.org/.</p>
                 
                   

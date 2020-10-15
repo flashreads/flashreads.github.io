@@ -856,43 +856,47 @@
                   <h1>Python dict.key vs dict[key]</h1>
                 
                 <p>To get the value from the dictionary the most pythonic way would be to use the square brackets <code>[ ]</code> e.g</p>
-<pre><code class="language-python"># note that dict keys are case-sensitive
-capitals = {
-    'usa' : 'washinghton',
-    'england' : 'london',
-    'france' : 'paris'
-}
-capitals['usa']
-&gt;&gt;&gt;'washinghton'
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># note that dict keys are case-sensitive</span>
+<span class="n">capitals</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;usa&#39;</span> <span class="p">:</span> <span class="s1">&#39;washinghton&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;england&#39;</span> <span class="p">:</span> <span class="s1">&#39;london&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;france&#39;</span> <span class="p">:</span> <span class="s1">&#39;paris&#39;</span>
+<span class="p">}</span>
+<span class="n">capitals</span><span class="p">[</span><span class="s1">&#39;usa&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span><span class="s1">&#39;washinghton&#39;</span>
+</code></pre></div>
+
 <p>Also, you can use the <code>get</code> method e.g</p>
-<pre><code class="language-python">capitals = {
-    'usa' : 'washinghton',
-    'england' : 'london',
-    'france' : 'paris'
-}
-capitals.get('usa')
-&gt;&gt;&gt;'washinghton'
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">capitals</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;usa&#39;</span> <span class="p">:</span> <span class="s1">&#39;washinghton&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;england&#39;</span> <span class="p">:</span> <span class="s1">&#39;london&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;france&#39;</span> <span class="p">:</span> <span class="s1">&#39;paris&#39;</span>
+<span class="p">}</span>
+<span class="n">capitals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;usa&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="s1">&#39;washinghton&#39;</span>
+</code></pre></div>
+
 <p>So, in both examples we got the same response 'washinghton'. The question now is what is the difference between this two examples? Let's try
 another example, using the key that isn't in the capitals dict:</p>
-<pre><code class="language-python">capitals = {
-    'usa' : 'washinghton',
-    'england' : 'london',
-    'france' : 'paris'
-}
-capitals['spain']
-&gt;&gt;&gt; KeyError: 'spain'
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">capitals</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;usa&#39;</span> <span class="p">:</span> <span class="s1">&#39;washinghton&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;england&#39;</span> <span class="p">:</span> <span class="s1">&#39;london&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;france&#39;</span> <span class="p">:</span> <span class="s1">&#39;paris&#39;</span>
+<span class="p">}</span>
+<span class="n">capitals</span><span class="p">[</span><span class="s1">&#39;spain&#39;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ne">KeyError</span><span class="p">:</span> <span class="s1">&#39;spain&#39;</span>
+</code></pre></div>
+
 <p>We got the <a href="https://docs.python.org/3/library/exceptions.html#KeyError">KeyError</a>, which is quite expected because we know that the 'spain' key is not avaiable in the dictionary. Let's try with <code>get</code> method now:</p>
-<pre><code class="language-python">capitals = {
-    'usa' : 'washinghton',
-    'england' : 'london',
-    'france' : 'paris'
-}
-capitals.get('germany')
-&gt;&gt;&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">capitals</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;usa&#39;</span> <span class="p">:</span> <span class="s1">&#39;washinghton&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;england&#39;</span> <span class="p">:</span> <span class="s1">&#39;london&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;france&#39;</span> <span class="p">:</span> <span class="s1">&#39;paris&#39;</span>
+<span class="p">}</span>
+<span class="n">capitals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;germany&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+</code></pre></div>
+
 <p>We didn't get any Error back, just the empty value. That is the difference between using <code>get method</code> and <code>square brackets</code>. The dict[key] will always throw KeyError when the key is not found. The <a href="https://docs.python.org/3/library/stdtypes.html#dict.get"><code>get method</code></a> accepts additonal parameter <code>dict.get(key, [default])</code> which returnes the default value in case the key is not found. In our case we didn't specify value so it was setup as None. </p>
                 
                   

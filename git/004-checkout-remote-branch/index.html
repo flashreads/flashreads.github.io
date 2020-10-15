@@ -932,22 +932,25 @@
                 <h2 id="how-to-check-out-a-remote-git-branch">How to check out a remote Git branch</h2>
 <p>You need to work on a git branch that you don't have locally, but you are not sure how to pull and switch to that branch.
 Let's first list the remote branches so we are sure the branch exists. To list all of the remote branches run:</p>
-<pre><code class="language-bash">git branch -a
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git branch -a
+</code></pre></div>
+
 <p>This will list all of the local and remote branches. </p>
-<pre><code>local_branch1
-local_branch2
-remotes/new_branch
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">local_branch1</span>
+<span class="err">local_branch2</span>
+<span class="err">remotes/new_branch</span>
+</code></pre></div>
+
 <p>The first displayed are all local branches, and the branches that contain <code>remote/</code> are the remote branches.
 Copy the name of the remote branch you want to work on and execute:</p>
-<pre><code class="language-bash">git checkout new_branch
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git checkout new_branch
+</code></pre></div>
+
 <p>You should see the <code>Branch 'new_branch' set up to track remote branch 'new_branch' from 'origin'.</code> message. This means you have successfully checkout to the  <code>new_branch</code>. </p>
 <h2 id="multiple-remotes">Multiple remotes</h2>
 <p>There are cases where the repository will contain more than one remote. In that case run:</p>
-<pre><code class="language-bash">git checkout -t &lt;name of remote&gt;/new_branch
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git checkout -t &lt;name of remote&gt;/new_branch
+</code></pre></div>
                 
                   
                 

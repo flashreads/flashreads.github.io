@@ -856,23 +856,26 @@
                   <h1>Python Modules</h1>
                 
                 <p>Imagine a complex project where you have a lot of code. Having everything written in a single Python file will become un-maintainable, too complex and hard to debug. To have an abstraction layer that will provide separation of the code in different parts that can be reusable would be a great advantage. So, for example, to import one file into another and reuse classes and functions from it. Python already provides that abstraction by using the <code>modules</code>. Adding the <code>import</code> statement in the Python file means you are using the modules. Let's check that with a simple code example. The following directory contains two Python files:</p>
-<pre><code>├── modulea.py
-├── moduleb.py
-</code></pre>
-<p>The <code>modulea</code> contains one function e.g</p>
-<pre><code class="language-python">def my_awesome_number(number):
-    print(f'The awesome number is {number}'.)
-</code></pre>
-<p>Now, let's import <code>modulea</code> in <code>moduleb</code></p>
-<pre><code class="language-python"># other imports could be included too e.g 
-from random import random # pyhthon module for generating random numbers
-# import the modulea
-import modulea
+<div class="codehilite"><pre><span></span><code><span class="err">├── modulea.py</span>
+<span class="err">├── moduleb.py</span>
+</code></pre></div>
 
-def random_number():
-    numb = random()
-    modulea.my_awesome_print(numb)
-</code></pre>
+<p>The <code>modulea</code> contains one function e.g</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">my_awesome_number</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The awesome number is </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s1">&#39;</span><span class="o">.</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Now, let's import <code>modulea</code> in <code>moduleb</code></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># other imports could be included too e.g </span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span> <span class="c1"># pyhthon module for generating random numbers</span>
+<span class="c1"># import the modulea</span>
+<span class="kn">import</span> <span class="nn">modulea</span>
+
+<span class="k">def</span> <span class="nf">random_number</span><span class="p">():</span>
+    <span class="n">numb</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>
+    <span class="n">modulea</span><span class="o">.</span><span class="n">my_awesome_print</span><span class="p">(</span><span class="n">numb</span><span class="p">)</span>
+</code></pre></div>
+
 <p>What happens when we import <code>modulea</code> in <code>moduleb</code>?</p>
 <p>The <code>import modulea</code> will look in:
 * The same directory for the file with the name <code>modulea.py</code>.

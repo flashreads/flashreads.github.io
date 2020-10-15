@@ -881,10 +881,8 @@ you want to read the data from a <code>String</code>.</p>
 <p>To convert to input stream, the easiest way is first to convert the string to 
 array of bytes, then read from the bytes using <code>ByteArrayInputStream</code>.</p>
 <p>Here is an one-liner on how to do that in Java:</p>
-<pre><code class="language-java">
-InputStream stream = new ByteArrayInputStream(&quot;my-data&quot;.getBytes(StandardCharsets.UTF_8));
-
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">InputStream</span> <span class="n">stream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayInputStream</span><span class="p">(</span><span class="s">&quot;my-data&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(</span><span class="n">StandardCharsets</span><span class="p">.</span><span class="na">UTF_8</span><span class="p">));</span>
+</code></pre></div>
                 
                   
                 

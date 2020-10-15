@@ -877,17 +877,17 @@
                 
                 <h1 id="string-contains-method-in-python">String <code>contains</code> method in Python</h1>
 <p>Python's alternative to <code>String.contains</code> is the keyword <code>in</code>.</p>
-<pre><code class="language-python">
-foobar = 'foobar'
-substr = 'foo'
+<div class="codehilite"><pre><span></span><code><span class="n">foobar</span> <span class="o">=</span> <span class="s1">&#39;foobar&#39;</span>
+<span class="n">substr</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span>
 
-if substr in foobar:
-    print('Yes')
-else:
-    print('No')
+<span class="k">if</span> <span class="n">substr</span> <span class="ow">in</span> <span class="n">foobar</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
 
-# Prints 'Yes'
-</code></pre>
+<span class="c1"># Prints &#39;Yes&#39;</span>
+</code></pre></div>
+
 <p>Although under the hood Python may use some of the <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">magic methods</a> like
 <a href="https://docs.python.org/3/reference/datamodel.html#object.__contains__"><code>__contains__</code></a>, <code>__iter__</code> and <code>__getitem__</code>, you should try to avoid using
 these methods directly on strings. These are useful when defining your own type

@@ -857,16 +857,18 @@
                 
                 <p>ClickHouse provides a command line tool for connecting to the ClickHouse database called <a href="https://clickhouse.tech/docs/en/interfaces/cli/#command-line-options">clickhouse-client</a>. Following the official documentation, you need to run <code>clickhouse-client</code> to successfully connect to ClickHouse server.
 But on the first attempt, you will usually get the following exception:</p>
-<pre><code>Code: 516. DB::Exception: Received from localhost:9000. DB::Exception: default: Authentication failed: password is incorrect or there is no user with such name.
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">Code</span><span class="o">:</span> <span class="mi">516</span><span class="o">.</span> <span class="n">DB</span><span class="o">::</span><span class="n">Exception</span><span class="o">:</span> <span class="n">Received</span> <span class="n">from</span> <span class="n">localhost</span><span class="o">:</span><span class="mi">9000</span><span class="o">.</span> <span class="n">DB</span><span class="o">::</span><span class="n">Exception</span><span class="o">:</span> <span class="k">default</span><span class="o">:</span> <span class="n">Authentication</span> <span class="n">failed</span><span class="o">:</span> <span class="n">password</span> <span class="k">is</span> <span class="n">incorrect</span> <span class="n">or</span> <span class="n">there</span> <span class="k">is</span> <span class="n">no</span> <span class="n">user</span> <span class="k">with</span> <span class="n">such</span> <span class="n">name</span><span class="o">.</span>
+</code></pre></div>
+
 <p>That's because the first time you installed ClickHouse you have entered the default password so you must provide that one as an argument to the <code>clickhouse-client</code> e.g</p>
-<pre><code>clickhouse-client --password=your-password 
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">clickhouse-client --password=your-password </span>
+</code></pre></div>
+
 <p>And now, you should get a successful connection message:</p>
-<pre><code>ClickHouse client version 20.4.2.9 (official build).
-Connecting to localhost:9000 as user default.
-Connected to ClickHouse server version 20.4.2 revision 54434.
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">ClickHouse client version 20.4.2.9 (official build).</span>
+<span class="err">Connecting to localhost:9000 as user default.</span>
+<span class="err">Connected to ClickHouse server version 20.4.2 revision 54434.</span>
+</code></pre></div>
                 
                   
                 

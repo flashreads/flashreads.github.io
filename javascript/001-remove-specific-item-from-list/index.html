@@ -937,18 +937,18 @@
 <p>Removing an element by value from an array is a very common task in day to day coding.
 Javascript Arays do not directly expose method to do this by element value, however this can easily be achieved using
 the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>splice</code></a> method:</p>
-<pre><code class="language-javascript">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
-console.log(vegetables)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Radish&quot;, &quot;Carrot&quot;]
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">vegetables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;Turnip&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">,</span> <span class="s1">&#39;Carrot&#39;</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetables</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Radish&quot;, &quot;Carrot&quot;]</span>
 
-// Remove &quot;Radish&quot;
-let removedItem = vegetables.splice(vegetables.indexOf('Radish'), 1) // this is how to remove an item
-console.log(vegetables)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]
-console.log('Removed item:', removedItem)
-// Removed Item: Radish
+<span class="c1">// Remove &quot;Radish&quot;</span>
+<span class="kd">let</span> <span class="nx">removedItem</span> <span class="o">=</span> <span class="nx">vegetables</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">vegetables</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Radish&#39;</span><span class="p">),</span> <span class="mf">1</span><span class="p">)</span> <span class="c1">// this is how to remove an item</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetables</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Removed item:&#39;</span><span class="p">,</span> <span class="nx">removedItem</span><span class="p">)</span>
+<span class="c1">// Removed Item: Radish</span>
+</code></pre></div>
 
-</code></pre>
 <p>The <code>splice</code> approach is the recommended way of removing an element in Javascript 
 (See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Description">"Common Operations" on MDN</a>).</p>
 <p>The <code>splice</code> method changes the content of the array by removing (and/or replacing) elements in the array, at the given
@@ -960,33 +960,36 @@ element at the given position will be removed.</p>
 <h2 id="remove-an-element-by-value-without-modifying-the-original-array">Remove an element by value without modifying the original array</h2>
 <p>To remove an element without modifying the original array, we can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"><code>slice</code></a>
 to slice the array into two sub-arrays and then concatenate them both into one array:</p>
-<pre><code class="language-javascript">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot']
-let pos = vegetables.indexOf('Radish')  // get the position of the element we want to remove
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">vegetables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;Turnip&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">,</span> <span class="s1">&#39;Carrot&#39;</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">vegetables</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Radish&#39;</span><span class="p">)</span>  <span class="c1">// get the position of the element we want to remove</span>
 
-let vegetablesNoRadish = vegetables.slice(0, pos).concat(vegetables.slice(pos + 1))
-console.log(vegetablesNoRadish)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]
+<span class="kd">let</span> <span class="nx">vegetablesNoRadish</span> <span class="o">=</span> <span class="nx">vegetables</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="nx">pos</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="nx">vegetables</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">pos</span> <span class="o">+</span> <span class="mf">1</span><span class="p">))</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetablesNoRadish</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]</span>
 
-// The original array is unchanged
-console.log(vegetables)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Radish&quot;, &quot;Carrot&quot;]
-</code></pre>
+<span class="c1">// The original array is unchanged</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetables</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Radish&quot;, &quot;Carrot&quot;]</span>
+</code></pre></div>
+
 <h2 id="remove-all-elements-with-the-same-value-from-the-array">Remove all elements with the same value from the array</h2>
 <p>To remove all elements in the array that have the given value, we can use method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"><code>filter</code></a>:</p>
-<pre><code class="language-javascript">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot', 'Radish']
-let vegetablesNoRadish = vegetables.filter(function(val) {
-    return val !== 'Radish';
-})
-console.log(vegetablesNoRadish)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]
-</code></pre>
-<p>Using ECMA Script 6:</p>
-<pre><code class="language-javascript">let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot', 'Radish']
-let vegetablesNoRadish = vegetables.filter(val =&gt; val !== 'Radish')
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">vegetables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;Turnip&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">,</span> <span class="s1">&#39;Carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nx">vegetablesNoRadish</span> <span class="o">=</span> <span class="nx">vegetables</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">val</span> <span class="o">!==</span> <span class="s1">&#39;Radish&#39;</span><span class="p">;</span>
+<span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetablesNoRadish</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]</span>
+</code></pre></div>
 
-console.log(vegetablesNoRadish)
-// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]
-</code></pre>
+<p>Using ECMA Script 6:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">vegetables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cabbage&#39;</span><span class="p">,</span> <span class="s1">&#39;Turnip&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">,</span> <span class="s1">&#39;Carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;Radish&#39;</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nx">vegetablesNoRadish</span> <span class="o">=</span> <span class="nx">vegetables</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">val</span> <span class="p">=&gt;</span> <span class="nx">val</span> <span class="o">!==</span> <span class="s1">&#39;Radish&#39;</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vegetablesNoRadish</span><span class="p">)</span>
+<span class="c1">// [&quot;Cabbage&quot;, &quot;Turnip&quot;, &quot;Carrot&quot;]</span>
+</code></pre></div>
+
 <p>The approaches above work for most of the popular browsers and in NodeJS environments.</p>
                 
                   

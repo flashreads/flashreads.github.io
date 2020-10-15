@@ -968,26 +968,28 @@
 <p>To undo all changes made in the last commit, and go back to an earlier commit, we
 can use <code>git revert</code>.</p>
 <p>Let's say we have some repository, and we committed something by mistake:</p>
-<pre><code class="language-bash">$ git log --oneline 
-cba9069 (HEAD -&gt; master) Oops, this change is a mistake  &lt;-- We want to revert this commit
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+cba9069 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Oops, this change is a mistake  &lt;-- We want to revert this commit
 5b7794b Some stable changes
 e57b197 Adds some content
 187ea9d Initial commit
+</code></pre></div>
 
-</code></pre>
 <p>Then, to revert the latest commit, we can use <code>git revert &lt;commit sha&gt;</code>:</p>
-<pre><code class="language-bash">git revert cba9069
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git revert cba9069
+</code></pre></div>
+
 <p>This will pop up our favorite editor to enter the revert commit message and will create
 a new commit, which reverts <strong>all</strong> changes in the given commit.</p>
 <p>After the command is complete, the repository history will look like this:</p>
-<pre><code class="language-bash">$ git log --oneline 
-0ed5618 (HEAD -&gt; master) Revert &quot;Oops, this change is a mistake&quot;   &lt;-- this reverts all changes from cba9069
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+0ed5618 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Revert <span class="s2">&quot;Oops, this change is a mistake&quot;</span>   &lt;-- this reverts all changes from cba9069
 cba9069 Oops, this change is a mistake
 5b7794b Some stable changes   &lt;-- The final state of the repository will be the same as in this commit
 e57b197 Adds some content
 187ea9d Initial commit
-</code></pre>
+</code></pre></div>
+
 <p>As you can see, there is an additional commit that reverted our changes and the final state of the repository is
 the same as the state it had in the previous commit (the commit before the one we wanted to revert).</p>
 <p>This is useful when we want to keep the repository history and it is the recommended way of doing things. The upside
@@ -997,16 +999,17 @@ reverted commit - it's all there in the history.</p>
 <p>Sometimes we don't want to revert everything, but instead we need to make just a couple of changes and commit again.</p>
 <p>In these situations we can use <code>git reset --soft &lt;commit-ref&gt;</code>:</p>
 <p>Given the same state of the repository:</p>
-<pre><code>$ git log --oneline 
-cba9069 (HEAD -&gt; master) Oops, this change is a mistake  &lt;-- We want to make some changes here again and commit
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+cba9069 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Oops, this change is a mistake  &lt;-- We want to make some changes here again and commit
 5b7794b Some stable changes
 e57b197 Adds some content
 187ea9d Initial commit
+</code></pre></div>
 
-</code></pre>
 <p>Then we can do:</p>
-<pre><code class="language-bash">git reset --soft HEAD^
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git reset --soft HEAD^
+</code></pre></div>
+
 <p>This makes a soft reset to the commit that is parent of the current HEAD (the current HEAD is what we want to change).
 Soft reset means that Git will undo the changes of the commit in the following way:</p>
 <ul>
@@ -1015,62 +1018,66 @@ Soft reset means that Git will undo the changes of the commit in the following w
 </ul>
 <p>This gives us the opportunity to redo the changes and commit again.
 Doing a <code>git status</code> to see the changes we see something like this:</p>
-<pre><code class="language-bash">$ git status 
+<div class="codehilite"><pre><span></span><code>$ git status 
 On branch master
 Changes to be committed:
-  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+  <span class="o">(</span>use <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage<span class="o">)</span>
     modified:   README.md
+</code></pre></div>
 
-</code></pre>
 <p>And the history log:</p>
-<pre><code class="language-bash">$ git log --oneline 
-5b7794b (HEAD -&gt; master) Some stable changes
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+5b7794b <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Some stable changes
 e57b197 Adds some content
 187ea9d Initial commit
+</code></pre></div>
 
-</code></pre>
 <p>This is exactly what we wanted. After doing the changes we can commit:</p>
-<pre><code class="language-bash">$ git commit -m &quot;Fixed the commit&quot;
+<div class="codehilite"><pre><span></span><code>$ git commit -m <span class="s2">&quot;Fixed the commit&quot;</span>
 
 $ git log --oneline
-55293e6 (HEAD -&gt; master) Fixed the commit
+55293e6 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Fixed the commit
 5b7794b Some stable changes
 e57b197 Adds some content
 187ea9d Initial commit
+</code></pre></div>
 
-</code></pre>
 <h2 id="getting-rid-of-the-commit-completely">Getting rid of the commit completely</h2>
 <p>Sometimes we want to get rid of the commit completely. Maybe we have committed some sensitive data by mistake (like 
 an access key or password), and we want no trace of it in the history. In those cases, we can rebase the branch and 
 drop the commits we don't want.</p>
 <p>Again starting with the same repository, we can rebase on the parent commit of the good commit (going 2 commits back, 
 because we cannot drop a commit if there is just one commit in the rebase list):</p>
-<pre><code class="language-bash">$ git log --oneline 
-cba9069 (HEAD -&gt; master) Oops, this change is a mistake  &lt;-- We want this gone
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+cba9069 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Oops, this change is a mistake  &lt;-- We want this gone
 5b7794b Some stable changes
-e57b197 Adds some content &lt;-- we pass this commit to the rebase command, so we have 2 commits in the list
+e57b197 Adds some content &lt;-- we pass this commit to the rebase command, so we have <span class="m">2</span> commits in the list
 187ea9d Initial commit
+</code></pre></div>
 
-</code></pre>
 <p>Rebase:</p>
-<pre><code class="language-bash">git rebase -i e57b197
-</code></pre>
+<div class="codehilite"><pre><span></span><code>git rebase -i e57b197
+</code></pre></div>
+
 <p>In the rebase editor:</p>
-<pre><code>pick 5b7794b Some stable changes  &lt;-- we want to keep this
-drop cba9069 Oops, this change is a mistake &lt;-- but we want to drop this
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">pick 5b7794b Some stable changes  &lt;-- we want to keep this</span>
+<span class="err">drop cba9069 Oops, this change is a mistake &lt;-- but we want to drop this</span>
+</code></pre></div>
+
 <p>Save, and commit.</p>
 <p>The final state of the repository:</p>
-<pre><code class="language-bash">$ git log --oneline 
-5b7794b (HEAD -&gt; master) Some stable changes
+<div class="codehilite"><pre><span></span><code>$ git log --oneline 
+5b7794b <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> Some stable changes
 e57b197 Adds some content
 187ea9d Initial commit
-</code></pre>
+</code></pre></div>
+
 <p>And there are no changes staged for commit:</p>
-<pre><code>$ git status 
+<div class="codehilite"><pre><span></span><code>$ git status 
 On branch master
 nothing to commit, working tree clean
-</code></pre>
+</code></pre></div>
+
 <p><strong>Important Note:</strong> This will completely remove any trace of the commit, so once done, it is very hard to get 
 those changes back if we change our mind later on. We should use this approach only if we are <strong>certain</strong> that we
 want that commit completely gone.</p>

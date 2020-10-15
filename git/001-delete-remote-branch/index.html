@@ -926,16 +926,18 @@ no longer necessary. In either case, at some point they need to be deleted. We w
 to keep the repository clean and neat after all.</p>
 <p>Deleting a local branch in a Git repository is quite straight forward. You can use
 either of these commands to do it:</p>
-<pre><code class="language-bash">git branch -d &lt;branch_name&gt;
+<div class="codehilite"><pre><span></span><code>git branch -d &lt;branch_name&gt;
 git branch -D &lt;branch_name&gt;
-</code></pre>
-<p>To delete a branch in the remote repository, you can do something very similar:</p>
-<pre><code class="language-bash">git push -d &lt;remote&gt; &lt;branch_name&gt;
+</code></pre></div>
 
-# &lt;remote&gt; is the remote name, very often 'origin'
+<p>To delete a branch in the remote repository, you can do something very similar:</p>
+<div class="codehilite"><pre><span></span><code>git push -d &lt;remote&gt; &lt;branch_name&gt;
+
+<span class="c1"># &lt;remote&gt; is the remote name, very often &#39;origin&#39;</span>
 
 git push -d origin &lt;branch_name&gt;
-</code></pre>
+</code></pre></div>
+
 <h2 id="the-difference-between-d-and-d">The difference between <code>-d</code> and <code>-D</code></h2>
 <p>Both <code>-d</code> and <code>-D</code> are aliases:
  * <code>-d</code> is an alias for <code>--delete</code>. This deletes a branch <strong>only</strong> if the branch

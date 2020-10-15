@@ -856,29 +856,32 @@
                   <h1>How to list `dot` files in Linux</h1>
                 
                 <p>The <a href="https://en.wikipedia.org/wiki/Unix-like">Unix-like</a> operating systems are using <code>.</code> to point to the current directory and <code>..</code> to point to the parent directory. These entries are not usually the once you are looking when listing the current dir so the <code>ls</code> command hides them. But, there are a lot of files that are also starting with <code>.</code> which will not be visible too. For e.g run <code>ls</code> in a user home:</p>
-<pre><code class="language-bash">ls
-</code></pre>
+<div class="codehilite"><pre><span></span><code>ls
+</code></pre></div>
+
 <p>shall return</p>
-<pre><code>Desktop
-Documents
-Downloads
-info.txt
-csa.py
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">Desktop</span>
+<span class="n">Documents</span>
+<span class="n">Downloads</span>
+<span class="n">info</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">csa</span><span class="o">.</span><span class="n">py</span>
+</code></pre></div>
+
 <p>So, there are no <code>.</code> files. Many users are pointing to these files as <code>hidden</code> files but it is not necessarily true. The original intention was to hide only <code>.</code> and <code>..</code> but it was intentionally left to not list the other files too, since the community users find it more useful to name the files that are used for caching, configuration, preferences etc using the <code>.</code>. If you need to list those files too just add <code>-a</code> or <code>-all</code> flag to the <code>ls</code> command.</p>
-<pre><code class="language-bash"># do not ignore entries starting with .
+<div class="codehilite"><pre><span></span><code><span class="c1"># do not ignore entries starting with .</span>
 ls -a, --all
-</code></pre>
+</code></pre></div>
+
 <p>shall return</p>
-<pre><code>Desktop
-Documents
-Downloads
-info.txt
-csa.py
-.gradle
-.Skype
-.zoom
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">Desktop</span>
+<span class="n">Documents</span>
+<span class="n">Downloads</span>
+<span class="n">info</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">csa</span><span class="o">.</span><span class="n">py</span>
+<span class="o">.</span><span class="n">gradle</span>
+<span class="o">.</span><span class="n">Skype</span>
+<span class="o">.</span><span class="n">zoom</span>
+</code></pre></div>
                 
                   
                 

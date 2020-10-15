@@ -885,15 +885,16 @@ heap will have different memory locations even if they have the same content.</p
 <p>Java is a bit weird when it comes to string comparison. I remember me getting
 stumped when I first needed to compare strings in Java. I used the <code>==</code> comparison
 operator and got some weird results that I didn't expect, for example:</p>
-<pre><code class="language-java">if(&quot;foo&quot; == &quot;foo&quot;) {
-    // This always gets through
-}
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="s">&quot;foo&quot;</span> <span class="o">==</span> <span class="s">&quot;foo&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// This always gets through</span>
+<span class="p">}</span>
 
-// However this
-if(myVariable == &quot;foo&quot;) {
-    // would sometimes works, but other times will not work.
-}
-</code></pre>
+<span class="c1">// However this</span>
+<span class="k">if</span><span class="p">(</span><span class="n">myVariable</span> <span class="o">==</span> <span class="s">&quot;foo&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// would sometimes works, but other times will not work.</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <p>So what is going on?</p>
 <p>It all stems from the way Java handles variables and constants in your code. 
 Maybe you've heard of <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html" title="I thought of referencing the language specification for string literals, but that is just more confusing">string literals</a>. Literals in Java are primitive data types (like <code>int</code>,
@@ -907,14 +908,15 @@ has in the static memory.</p>
 <p>However, if we create new values using the <code>new</code> keyword, we're instructing the
 jvm to actually allocate new slot on the heap for our value: <code>String str = new String("foo");</code>.
 By now you may have some idea of what is going on:</p>
-<pre><code class="language-java">String a = &quot;foo&quot;;  // this is a literal and goes in the static memory
-String b = &quot;foo&quot;;  // also a literal, with same value as 'a', so 'b' points to the same
-                   // memory location as 'a'
+<div class="codehilite"><pre><span></span><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span>  <span class="c1">// this is a literal and goes in the static memory</span>
+<span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span>  <span class="c1">// also a literal, with same value as &#39;a&#39;, so &#39;b&#39; points to the same</span>
+                   <span class="c1">// memory location as &#39;a&#39;</span>
 
-String c = new String(&quot;foo&quot;)  // We allocate &quot;foo&quot; on the heap, although it has the
-                              // same value as 'a' and 'b', it is in a different
-                              // memory location - namely on the heap
-</code></pre>
+<span class="n">String</span> <span class="n">c</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">)</span>  <span class="c1">// We allocate &quot;foo&quot; on the heap, although it has the</span>
+                              <span class="c1">// same value as &#39;a&#39; and &#39;b&#39;, it is in a different</span>
+                              <span class="c1">// memory location - namely on the heap</span>
+</code></pre></div>
+
 <p>When doing <code>==</code> comparison in Java, by default the jvm compares <em>memory locations</em> - it will
 compare whether the memory address of the two objects is the same, and if it is, then the
 objects must be the same.</p>
@@ -924,47 +926,47 @@ will get two different memory locations and will evaluate to <code>false</code>.
 This method compares the string content, and <em>not</em> the memory addresses. And that is what we want
 when comparing strings.</p>
 <p>Here is some weirdness and examples on how to compare string and what not to do:</p>
-<pre><code class="language-java">
-String a = &quot;foo&quot;;
-String b = &quot;foo&quot;; 
+<div class="codehilite"><pre><span></span><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span> 
 
-a == b  // -&gt; true, but don't do this.
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>  <span class="c1">// -&gt; true, but don&#39;t do this.</span>
 
-a.equals(b)  // true. Do this instead.
+<span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1">// true. Do this instead.</span>
 
-String a = &quot;foo&quot;;
-String b = new String(&quot;foo&quot;)
+<span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;foo&quot;</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
 
-a == b  // false. One is a string literal, the other is a regular object on the heap.
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>  <span class="c1">// false. One is a string literal, the other is a regular object on the heap.</span>
 
-a.equals(b) // true. Compares the content: &quot;foo&quot; is equal to &quot;foo&quot;.
+<span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1">// true. Compares the content: &quot;foo&quot; is equal to &quot;foo&quot;.</span>
 
 
-// Alternative approach, with Objects.equals
-Objects.equals(&quot;foo&quot;, &quot;foo&quot;)               // true
-Objects.equals(&quot;foo&quot;, null)                // true. Protects us from null pointer dereferencing.
-Objects.equals(&quot;foo&quot;, new String(&quot;foo&quot;))   // true
+<span class="c1">// Alternative approach, with Objects.equals</span>
+<span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="s">&quot;foo&quot;</span><span class="p">)</span>               <span class="c1">// true</span>
+<span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">)</span>                <span class="c1">// true. Protects us from null pointer dereferencing.</span>
+<span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">))</span>   <span class="c1">// true</span>
+</code></pre></div>
 
-</code></pre>
 <p>So basically we want to use <code>String.equals</code> to compare the content of the strings. However
 in some cases we may run into problems, namely in the cases when we try to call <code>equals</code> from
 a variable that is <code>null</code>:</p>
-<pre><code class="language-java">String a = null;
+<div class="codehilite"><pre><span></span><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-a.equals(&quot;foo&quot;);  // NullPointerException
+<span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">);</span>  <span class="c1">// NullPointerException</span>
+</code></pre></div>
 
-</code></pre>
 <p>So in cases when we're comparing with a literal, always call equals from the literal:</p>
-<pre><code class="language-java">String a = null;
+<div class="codehilite"><pre><span></span><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-&quot;foo&quot;.equals(a)   // false. No exception was thrown.
-</code></pre>
+<span class="s">&quot;foo&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>   <span class="c1">// false. No exception was thrown.</span>
+</code></pre></div>
+
 <p>Alternatively you can use <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Objects.html#equals-java.lang.Object-java.lang.Object-"><code>Objects.equals</code></a> (available from java 1.7).
 This does what we want and takes care of the <code>null</code> values.</p>
-<pre><code class="language-java">String a = null;
+<div class="codehilite"><pre><span></span><code><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-Objects.equals(a, &quot;foo&quot;) // false. no exception thrown.
-</code></pre>
+<span class="n">Objects</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s">&quot;foo&quot;</span><span class="p">)</span> <span class="c1">// false. no exception thrown.</span>
+</code></pre></div>
                 
                   
                 

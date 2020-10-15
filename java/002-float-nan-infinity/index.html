@@ -923,16 +923,16 @@
 <p>You may be familiar with the fact that you cannot divide an integer with 0 in Java - it yields <code>java.lang.ArithmeticException: / by zero</code>.
 But what happens when we try to do this with floating point numbers.</p>
 <p>Let's give it a try:</p>
-<pre><code class="language-java">int m = 10, n = 0;
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-System.out.println(m/n);
-// Exception: java.lang.ArithmeticException: / by zero
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="o">/</span><span class="n">n</span><span class="p">);</span>
+<span class="c1">// Exception: java.lang.ArithmeticException: / by zero</span>
 
-float a = 10.0f, b = 0.0f;
-System.out.println(a/b);
-// Infinity
+<span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">10.0f</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">);</span>
+<span class="c1">// Infinity</span>
+</code></pre></div>
 
-</code></pre>
 <p>Now that is interesting, we didn't get an exception, but instead, we got something as a result: <code>Infinity</code>.</p>
 <p>If we check out the <code>Float</code> class, we can see that there are a couple of constants defined in the class:</p>
 <ul>
@@ -946,35 +946,36 @@ Infinity is not a specific number and has a set of rules defined for it. In Java
 <p>To get a positive infinity, it means that the result of some operation approaches infinite value, but from the positive side on the number axis - for
 example if we divide a positive number by 0, we get infinite results but all of them are positive, thus getting positive infinity.
 On the other hand, if we divide a negative number by 0, we also get infinite results, but all of them are negative, so negative infinity.</p>
-<pre><code class="language-java">float a = 1.0f;
-float b = 0.0f;
+<div class="codehilite"><pre><span></span><code><span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">1.0f</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
 
-System.out.println((a/b) == Float.POSITIVE_INFINITY);
-// true
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">Float</span><span class="p">.</span><span class="na">POSITIVE_INFINITY</span><span class="p">);</span>
+<span class="c1">// true</span>
 
-// if a is negative
-a = -1.0f;
-System.out.println((a/b) == Float.POSITIVE_INFINITY);
-// false, we should be getting negative infinity
+<span class="c1">// if a is negative</span>
+<span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0f</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">Float</span><span class="p">.</span><span class="na">POSITIVE_INFINITY</span><span class="p">);</span>
+<span class="c1">// false, we should be getting negative infinity</span>
 
-System.out.println((a/b) == Float.NEGATIVE_INFINITY);
-// true
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">((</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">Float</span><span class="p">.</span><span class="na">NEGATIVE_INFINITY</span><span class="p">);</span>
+<span class="c1">// true</span>
+</code></pre></div>
 
-</code></pre>
 <p>But what happens when both of the numbers are <code>0</code>? In maths, dividing zero by zero yields an undefined result.</p>
 <p>In Java we get <code>NaN</code>. This is also a constant defined in <code>Float</code> and <code>Double</code> classes.
 If we try to divide zero by zero, we get something that is not a number, so <code>NaN</code>.</p>
-<pre><code class="language-java">float a = 0.0f;
-float b = 0.0f;
-Float c = a/b;
+<div class="codehilite"><pre><span></span><code><span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.0f</span><span class="p">;</span>
+<span class="n">Float</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span>
 
-System.out.println(c);
-// NaN
-System.out.println(c == Float.NaN);
-// false
-System.out.println(c.isNaN());
-// true
-</code></pre>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="c1">// NaN</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="n">Float</span><span class="p">.</span><span class="na">NaN</span><span class="p">);</span>
+<span class="c1">// false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="na">isNaN</span><span class="p">());</span>
+<span class="c1">// true</span>
+</code></pre></div>
+
 <p>Now, this looks weird. Why isn't the result (<code>c</code>), which is clearly <code>NaN</code>, not equal to that constant?</p>
 <p>This also comes from maths, where we cannot compare two things that are not numbers. We can only compare something that has 
 a clear definition or has a clear value. NaN denotes a mathematically undefined value, and as such we cannot compare it (similar to <code>NULL</code> in <code>SQL</code>).</p>
@@ -982,42 +983,44 @@ a clear definition or has a clear value. NaN denotes a mathematically undefined 
 <h2 id="some-notes-on-serialization">Some notes on serialization</h2>
 <p>When serializing special care should be taken to serialize these values properly.
 If we do naive serialization, we would get an exception:</p>
-<pre><code class="language-java">Gson gson = new Gson();
-System.out.println(gson.toJson(new SomeObject(10.0f/0.0f)));
-// Throws an exception: java.lang.IllegalArgumentException: Infinity is not a valid double value as per JSON specification. To override this behavior, use GsonBuilder.serializeSpecialFloatingPointValues() method.
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Gson</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gson</span><span class="p">.</span><span class="na">toJson</span><span class="p">(</span><span class="k">new</span> <span class="n">SomeObject</span><span class="p">(</span><span class="mf">10.0f</span><span class="o">/</span><span class="mf">0.0f</span><span class="p">)));</span>
+<span class="c1">// Throws an exception: java.lang.IllegalArgumentException: Infinity is not a valid double value as per JSON specification. To override this behavior, use GsonBuilder.serializeSpecialFloatingPointValues() method.</span>
+</code></pre></div>
+
 <p>By setting the serialization of these values, we get the following:</p>
-<pre><code class="language-java">public static class SomeObject {
-    private float value;
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">SomeObject</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">float</span> <span class="n">value</span><span class="p">;</span>
 
-    public SomeObject(float value) {
-        this.value = value;
-    }
+    <span class="kd">public</span> <span class="nf">SomeObject</span><span class="p">(</span><span class="kt">float</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public float getValue() {
-        return value;
-    }
+    <span class="kd">public</span> <span class="kt">float</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
 
-    public void setValue(float value) {
-        this.value = value;
-    }
-}
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setValue</span><span class="p">(</span><span class="kt">float</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-...
+<span class="p">...</span>
 
-GsonBuilder builder = new GsonBuilder();
-builder.serializeSpecialFloatingPointValues();
-Gson gson = builder.create();
+<span class="n">GsonBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GsonBuilder</span><span class="p">();</span>
+<span class="n">builder</span><span class="p">.</span><span class="na">serializeSpecialFloatingPointValues</span><span class="p">();</span>
+<span class="n">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="na">create</span><span class="p">();</span>
 
-System.out.println(gson.toJson(new SomeObject(10.0f/0.0f)));
-// {&quot;value&quot;:Infinity}
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gson</span><span class="p">.</span><span class="na">toJson</span><span class="p">(</span><span class="k">new</span> <span class="n">SomeObject</span><span class="p">(</span><span class="mf">10.0f</span><span class="o">/</span><span class="mf">0.0f</span><span class="p">)));</span>
+<span class="c1">// {&quot;value&quot;:Infinity}</span>
 
-System.out.println(gson.toJson(new SomeObject(-10.0f/0.0f)));
-// {&quot;value&quot;:-Infinity}
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gson</span><span class="p">.</span><span class="na">toJson</span><span class="p">(</span><span class="k">new</span> <span class="n">SomeObject</span><span class="p">(</span><span class="o">-</span><span class="mf">10.0f</span><span class="o">/</span><span class="mf">0.0f</span><span class="p">)));</span>
+<span class="c1">// {&quot;value&quot;:-Infinity}</span>
 
-System.out.println(gson.toJson(new SomeObject(0.0f/0.0f)));
-// {&quot;value&quot;:NaN}
-</code></pre>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">gson</span><span class="p">.</span><span class="na">toJson</span><span class="p">(</span><span class="k">new</span> <span class="n">SomeObject</span><span class="p">(</span><span class="mf">0.0f</span><span class="o">/</span><span class="mf">0.0f</span><span class="p">)));</span>
+<span class="c1">// {&quot;value&quot;:NaN}</span>
+</code></pre></div>
+
 <p>Be careful though, these values may not be recognized by some JSON parsers and you may get some unpredictable results, such as
 the values to be converted to <code>String</code> or getting an error while parsing.</p>
                 

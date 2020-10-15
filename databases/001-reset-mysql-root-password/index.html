@@ -924,35 +924,40 @@
 <ol>
 <li>The first thing to do is to stop the MySQL server:</li>
 </ol>
-<pre><code>sudo /etc/init.d/mysql stop
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo /etc/init.d/mysql stop</span>
+</code></pre></div>
+
 <ol>
 <li>Start the server with additional flags:</li>
 </ol>
-<pre><code>sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &amp;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">sudo /usr/sbin/mysqld --skip-grant-tables --skip-networking &amp;</span>
+</code></pre></div>
+
 <p>The <code>--skip-grant-tables</code> flag will start the server without the grant tables in MySQL system schema. That means no privileges and unrestricted access to all databases, so it is best to also disable remote connections by using the  <code>--skip_networking</code>.</p>
 <ol>
 <li>Use the MySQL client to connect back to the server:</li>
 </ol>
-<pre><code> mysql -u root
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err"> mysql -u root</span>
+</code></pre></div>
+
 <ol>
 <li>Now, let's reload the grant tables:</li>
 </ol>
-<pre><code class="language-sql">FLUSH PRIVILEGES;
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">FLUSH</span> <span class="k">PRIVILEGES</span><span class="p">;</span>
+</code></pre></div>
+
 <ol>
 <li>Update the password for <code>root</code> user:</li>
 </ol>
-<pre><code class="language-sql">update user set authentication_string=password('new_pass') where user='root';
-update user set plugin=&quot;mysql_native_password&quot; where User='root'; 
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">update</span> <span class="k">user</span> <span class="k">set</span> <span class="n">authentication_string</span><span class="o">=</span><span class="n">password</span><span class="p">(</span><span class="s1">&#39;new_pass&#39;</span><span class="p">)</span> <span class="k">where</span> <span class="k">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="k">update</span> <span class="k">user</span> <span class="k">set</span> <span class="n">plugin</span><span class="o">=</span><span class="ss">&quot;mysql_native_password&quot;</span> <span class="k">where</span> <span class="k">User</span><span class="o">=</span><span class="s1">&#39;root&#39;</span><span class="p">;</span> 
+</code></pre></div>
+
 <p>The <code>mysql_native_password</code> is the default authentication plugin used. After executing the above query just restart the server and you can loggin with new password.</p>
 <h2 id="change-the-root-password-in-mariadb-10x">Change the root password in MariaDB 10.x</h2>
 <p>In the latest MariaDB versions the above steps are simplified. You can skip steps 1 and 2 from above. Start from the 3 step and use <code>sudo</code> when login to MySQL client. The 4 and 5 steps are the same. To verify if the new password works:</p>
-<pre><code class="language-sql">mysql -u root -p
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">mysql</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span>
+</code></pre></div>
                 
                   
                 

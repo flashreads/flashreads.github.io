@@ -856,28 +856,32 @@
                   <h1>fatal git-write-tree error building trees</h1>
                 
                 <p>If you search the above error, most of the answers would be to use <code>git reset --hard</code> command. But, you should be careful with executing this command. You can lose all uncommitted changes from your working tree. So how to resolve this error?</p>
-<pre><code>fatal: git-write-tree: error building trees
-Cannot save the current index state
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">fatal</span><span class="o">:</span> <span class="n">git</span><span class="o">-</span><span class="n">write</span><span class="o">-</span><span class="n">tree</span><span class="o">:</span> <span class="n">error</span> <span class="n">building</span> <span class="n">trees</span>
+<span class="n">Cannot</span> <span class="n">save</span> <span class="n">the</span> <span class="n">current</span> <span class="n">index</span> <span class="n">state</span>
+</code></pre></div>
+
 <p>This error usually happens when you have conflicts or unmerged paths. To check the unmerged paths run:</p>
-<pre><code>git status
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">git status</span>
+</code></pre></div>
+
 <p>This should show the following message:</p>
-<pre><code>$ git status
-&gt; # On branch add-helpers
-&gt; # You have unmerged paths.
-&gt; #   (fix conflicts and run &quot;git commit&quot;)
-&gt; #
-&gt; # Unmerged paths:
-&gt; #   (use &quot;git add ...&quot; to mark resolution)
-&gt; #
-&gt; # both modified:      utilities/helpers.py
-&gt; #
-&gt; no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$ git status
+&gt; <span class="c1"># On branch add-helpers</span>
+&gt; <span class="c1"># You have unmerged paths.</span>
+&gt; <span class="c1">#   (fix conflicts and run &quot;git commit&quot;)</span>
+&gt; <span class="c1">#</span>
+&gt; <span class="c1"># Unmerged paths:</span>
+&gt; <span class="c1">#   (use &quot;git add ...&quot; to mark resolution)</span>
+&gt; <span class="c1">#</span>
+&gt; <span class="c1"># both modified:      utilities/helpers.py</span>
+&gt; <span class="c1">#</span>
+&gt; no changes added to commit <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> and/or <span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</code></pre></div>
+
 <p>Open the file with conflicts and look for the conflict markers <code>&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;</code>. Make the changes you want to keep and then add your changes:</p>
-<pre><code class="language-git">git add utilities/helpers.py
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="err">git add utilities/helpers.py</span>
+</code></pre></div>
+
 <p>Now, you will be able to commit your changes or switch to another branch.</p>
                 
                   
