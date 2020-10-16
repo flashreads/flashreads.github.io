@@ -7,3 +7,10 @@ markdown_extensions:
   - meta
   - codehilite
   - admonition
+plugins:
+  - exclude:
+      glob:
+        - template.md
+      regex:
+        - "^[^/]+/(README|readme)\\.(md|MD)$"
+        - "^[^/]+/([^/]+/)+(README|readme)\\.(md|MD)$"
