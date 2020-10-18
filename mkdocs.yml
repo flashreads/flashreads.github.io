@@ -10,6 +10,7 @@ markdown_extensions:
   - meta
   - codehilite
   - admonition
+  - meta
 plugins:
   - exclude:
       glob:
@@ -17,3 +18,4 @@ plugins:
       regex:
         - "^[^/]+/(README|readme)\\.(md|MD)$"
         - "^[^/]+/([^/]+/)+(README|readme)\\.(md|MD)$"
+  - git-revision-date-localized

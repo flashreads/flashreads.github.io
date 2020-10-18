@@ -1,0 +1,21 @@
+{#-
+    Source date with author
+-#}
+{% import "partials/language.html" as lang with context %}
+{% set label = lang.t("source.revision.date") %}
+<hr>
+<div class="md-source-date">
+<small>
+    {% if page.meta.git_revision_date_localized %}
+    {% if page and page.meta and page.meta.author %}
+        {{page.meta.author}},
+    {% endif %}
+    {{ page.meta.git_revision_date_localized }}
+    {% elif page.meta.revision_date %}
+    {% if page and page.meta and page.meta.author %}
+        {{page.meta.author}},
+    {% endif %}
+    {{ page.meta.revision_date }}
+    {% endif %}
+</small>
+</div>
