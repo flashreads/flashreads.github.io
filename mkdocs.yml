@@ -12,6 +12,8 @@ markdown_extensions:
   - admonition
   - meta
 plugins:
+  - search:
+      lang: 'en'
   - exclude:
       glob:
         - template.md
