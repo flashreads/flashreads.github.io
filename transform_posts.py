@@ -30,12 +30,12 @@ class Header:
         tags = attrs.get('tags')
         if tags:
             attrs['tags'] = [t.strip() for t in tags.split(',')]
-        
+        attrs['keywords'] = tags #keep keywords same as tags for now
         attrs['template'] = 'post'
         attrs['categories'] = [self.category] if self.category else []
         if 'cover' not in attrs:
             if self.category:
-                attrs['cover'] = '../images/categories/%s.png' % self.category
+                attrs['cover'] = '../../images/categories/%s.png' % self.category
 
         return attrs
 
