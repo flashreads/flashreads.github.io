@@ -14,11 +14,11 @@ jobs:
 
       - name: Install and Build 🔧 
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install setuptools
-          python3 -m pip install -r requirements.txt
-          git clone https://github.com/flashreads/blogs.git docs
-          python3 -m mkdocs build -d public
+          npm install
+          gatsby new flashreads git@github.com:flashreads/gatsby-blog-template.git
+          git clone https://github.com/flashreads/blogs.git flashreads/content/posts
+          cd flashreads
+          npm run develop
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
