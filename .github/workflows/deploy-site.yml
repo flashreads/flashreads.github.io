@@ -15,7 +15,7 @@ jobs:
       - name: Install and Build 🔧 
         run: |
           sudo yarn global add gatsby-cli
-          gatsby new flashreads git@github.com:flashreads/gatsby-blog-template.git
+          gatsby new flashreads https://github.com/flashreads/gatsby-blog-template.git
           git clone https://github.com/flashreads/blogs.git flashreads/content/posts
           cd flashreads
           gatsby build
