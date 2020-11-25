@@ -23,8 +23,8 @@
 <url> <loc>https://theflashreads.com/how-to-install-postgres-on-linux-debian</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/memory-optimization-for-html5-games</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/bootstrap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/first-steps-in-writing-files-in-python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/first-steps-in-reading-files-in-python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/first-steps-in-writing-files-in-python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/f-strings-a-nice-way-of-formatting-strings</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/java-final-vs-finally-vs-finalize</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/gitlens</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -77,8 +77,8 @@
 <url> <loc>https://theflashreads.com/how-to-remove-a-specific-item-from-a-list-array-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/terms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/abstraction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/oop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
