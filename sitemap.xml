@@ -42,8 +42,8 @@
 <url> <loc>https://theflashreads.com/introduction-to-python-and-its-features</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/set-interface-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/list-interface-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/a-brief-introduction-to-what-is-javascript-and-why-it-is-popular</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/variable-types-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/a-brief-introduction-to-what-is-javascript-and-why-it-is-popular</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/howto-propoerly-delete-an-element-from-a-slice-in-go</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-convert-string-to-inputstream-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/nan-and-infinity-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -67,8 +67,8 @@
 <url> <loc>https://theflashreads.com/notimplemented-vs-notimplementederror-in-python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-list-dot-files-in-linux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-check-out-a-remote-git-branch</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/how-to-unpublish-github-pages-site</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-reset-the-mysql-root-password</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/how-to-unpublish-github-pages-site</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-undo-the-latest-local-commit-in-git-repository</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/python-regex-cheat-sheet</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/install-pytorch-on-windows</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -77,8 +77,8 @@
 <url> <loc>https://theflashreads.com/how-to-remove-a-specific-item-from-a-list-array-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/terms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/abstraction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/oop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -252,10 +252,10 @@
 <url> <loc>https://theflashreads.com/tag/git-remote</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/git-checkout</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/git-branches</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/github</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/github-pages</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/mysql</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/mariadb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/github</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/github-pages</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/revert</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/git-revert</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/git-reset</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
