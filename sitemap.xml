@@ -28,8 +28,8 @@
 <url> <loc>https://theflashreads.com/f-strings-a-nice-way-of-formatting-strings</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/java-final-vs-finally-vs-finalize</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/gitlens</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/fix-for-properly-displaying-images</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/css-variables</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/fix-for-properly-displaying-images</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/javascript-sort-trick</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/css-responsive-fonts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/changes-behavior-interface-java-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,8 +42,8 @@
 <url> <loc>https://theflashreads.com/introduction-to-python-and-its-features</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/set-interface-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/list-interface-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/variable-types-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/a-brief-introduction-to-what-is-javascript-and-why-it-is-popular</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/variable-types-in-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/howto-propoerly-delete-an-element-from-a-slice-in-go</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-convert-string-to-inputstream-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/nan-and-infinity-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -76,9 +76,9 @@
 <url> <loc>https://theflashreads.com/git-delete-a-branch-remotely</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/how-to-remove-a-specific-item-from-a-list-array-javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/contact</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/terms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/abstraction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/oop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -153,9 +153,9 @@
 <url> <loc>https://theflashreads.com/tag/gitlens</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/vs-code-extension</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/css</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/css-variables</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/images</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/image-display</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/css-variables</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/sort</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/localecompare</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
