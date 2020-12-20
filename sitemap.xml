@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://theflashreads.com/pandas-read-files</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/abstract-classes-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/map-interface-in-java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/creating-a-command-line-interface-program-with-argparse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -79,6 +80,10 @@
 <url> <loc>https://theflashreads.com/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/terms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/python/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/python/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/python/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/pandas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/abstraction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/oop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -90,6 +95,7 @@
 <url> <loc>https://theflashreads.com/tag/hashmap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/linkedhashmap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/treemap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/cli</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/args</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/argparse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -118,10 +124,6 @@
 <url> <loc>https://theflashreads.com/tag/tricks</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/numppy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/array</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/python/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/python/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/python/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/nlp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/libraries</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/text-processing</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -271,13 +273,14 @@
 <url> <loc>https://theflashreads.com/tag/repository</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/command-line</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/githubcom</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/python/page/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/javascript/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/databases</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
