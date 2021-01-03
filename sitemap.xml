@@ -80,6 +80,9 @@
 <url> <loc>https://theflashreads.com/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/search</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/terms</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/tag/interface</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/python/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/python/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/python/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -87,8 +90,6 @@
 <url> <loc>https://theflashreads.com/tag/abstraction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/oop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/class</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/collection</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/api</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/map</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -163,7 +164,6 @@
 <url> <loc>https://theflashreads.com/tag/localecompare</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/responsive-fonts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/css-fonts</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/tag/interface</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/default-method</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/static-static</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/plot</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -273,14 +273,14 @@
 <url> <loc>https://theflashreads.com/tag/repository</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/command-line</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/tag/githubcom</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://theflashreads.com/category/java/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/python/page/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://theflashreads.com/category/java/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/javascript/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://theflashreads.com/category/databases</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
