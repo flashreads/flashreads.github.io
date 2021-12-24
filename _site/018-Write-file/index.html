@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>First steps in writing files in python | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>First steps in writing files in python | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="First steps in writing files in python" />
+<meta name="author" content="Marlene Heinrich" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Writing files in Python" />
+<meta property="og:description" content="Writing files in Python" />
+<link rel="canonical" href="http://localhost:4000/018-Write-file/" />
+<meta property="og:url" content="http://localhost:4000/018-Write-file/" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/python/file.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-27T16:44:28+01:00" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Marlene Heinrich"},"@type":"BlogPosting","headline":"First steps in writing files in python","dateModified":"2020-10-27T16:44:28+01:00","datePublished":"2020-10-27T16:44:28+01:00","image":"http://localhost:4000/assets/images/python/file.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/018-Write-file/"},"url":"http://localhost:4000/018-Write-file/","author":{"@type":"Person","name":"Marlene Heinrich"},"description":"Writing files in Python","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=First steps in writing files in python&url=http://localhost:4000/018-Write-file/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/018-Write-file/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/018-Write-file/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/e5f24f0ccce8b5e60f83bbcc9ad17417?s=250&d=mm&r=x" alt="Marlene Heinrich" title="Marlene Heinrich">
+                        
+                        <div>
+                            By Marlene Heinrich
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">First steps in writing files in python</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/python/file.svg" alt="First steps in writing files in python">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h2 id="writing-files-in-python">Writing files in Python</h2>
+
+<p>Working with data, it is often useful not just to read files, but also to be</p>
+
+<p>able to write data to files. Here we are going to discuss a first simple</p>
+
+<p>approach on how to write data, that we have saved in lists to a file.</p>
+
+<h2 id="create-the-data">Create the data</h2>
+
+<p>Imagine, that you have read data from a file and calculated some new stuff, that</p>
+
+<p>you have saved in two lists:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now we want to write these to lists to a file, so we can forget about them for</p>
+
+<p>a few weeks and then use a read-function and continue working again. A file we</p>
+
+<p>are interested in might look something like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span>
+
+<span class="mi">1</span><span class="p">,</span><span class="mi">7</span>
+
+<span class="mi">2</span><span class="p">,</span><span class="mi">6</span>
+
+<span class="mi">3</span><span class="p">,</span><span class="mi">5</span>
+
+<span class="mi">4</span><span class="p">,</span><span class="mi">4</span>
+
+<span class="mi">5</span><span class="p">,</span><span class="mi">3</span>
+
+<span class="mi">6</span><span class="p">,</span><span class="mi">2</span>
+
+<span class="mi">7</span><span class="p">,</span><span class="mi">1</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="write-code-that-creates-a-file">Write code that creates a file</h2>
+
+<p>The easiest code to create and write a file looks like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"testfile.dat"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+
+    <span class="nb">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">"x,y</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+
+        <span class="nb">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s">","</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The first line opens a file named “testfile.dat”. The “w”-statement opens a</p>
+
+<p>file and overwrites content. If we swap it for “a” the new content will be</p>
+
+<p>appended to the file. Try that one out to see the difference! The first write</p>
+
+<p>statement just creates a nice heading for our file, while the rest of the file</p>
+
+<p>is written in a loop and adds the data.</p>
+
+<p>The single entries have to be given as strings, so the float (or whatever) has</p>
+
+<p>to be converted. If you are not sure about the different outcome of</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>and</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="s">"x[i]"</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>try both out so it does not go wrong in an important moment.</p>
+
+<p>Different to reading a file in Python it is not super easy to write a function to</p>
+
+<p>write data to a file that</p>
+
+<p>fits all needs. But try out some different options to save your data in the</p>
+
+<p>python-program and you will find an option that suits your needs. And the</p>
+
+<p>general structure usually does not change, so you will be able to go a long way</p>
+
+<p>with the few lines you learned here!</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-27">27 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#python">python</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#beginner">#beginner</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#data">#data</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#python">#python</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//017-Read-file/"> &laquo; First steps in reading files in python</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//003-Install-postgres-on-linux/">How to install Postgres on Linux (Debian) &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#vendor">vendor (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#bundle">bundle (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ruby">ruby (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#2.5.0">2.5.0 (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#gems">gems (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-feed-0.11.0">jekyll-feed-0.11.0 (10)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#spec">spec (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fixtures">fixtures (18)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#news">news (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-sitemap-1.2.0">jekyll-sitemap-1.2.0 (8)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#updates">updates (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-paginate-1.1.0">jekyll-paginate-1.1.0 (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#source">source (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-3.8.5">jekyll-3.8.5 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#lib">lib (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#site_template">site_template (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll">jekyll (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#update">update (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>Arrays vs. ArrayLists in Java | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Arrays vs. ArrayLists in Java | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Arrays vs. ArrayLists in Java" />
+<meta name="author" content="Cindy Li" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Arrays vs. ArrayLists" />
+<meta property="og:description" content="Arrays vs. ArrayLists" />
+<link rel="canonical" href="http://localhost:4000/021-java-arrays-vs-arraylists/" />
+<meta property="og:url" content="http://localhost:4000/021-java-arrays-vs-arraylists/" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/java/java8.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-30T22:10:31+02:00" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Cindy Li"},"@type":"BlogPosting","headline":"Arrays vs. ArrayLists in Java","dateModified":"2021-10-30T22:10:31+02:00","datePublished":"2021-10-30T22:10:31+02:00","image":"http://localhost:4000/assets/images/java/java8.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/021-java-arrays-vs-arraylists/"},"url":"http://localhost:4000/021-java-arrays-vs-arraylists/","author":{"@type":"Person","name":"Cindy Li"},"description":"Arrays vs. ArrayLists","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Arrays vs. ArrayLists in Java&url=http://localhost:4000/021-java-arrays-vs-arraylists/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/021-java-arrays-vs-arraylists/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/021-java-arrays-vs-arraylists/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?s=250&d=mm&r=x" alt="Cindy Li" title="Cindy Li">
+                        
+                        <div>
+                            By Cindy Li
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Arrays vs. ArrayLists in Java</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/java/java8.svg" alt="Arrays vs. ArrayLists in Java">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h1 id="arrays-vs-arraylists">Arrays vs. ArrayLists</h1>
+
+<p>Although ‘arrays’ and ‘Arraylists’ both store information in the form of lists, one of the most fundamental differences between the two is how an array is a ‘fixed legnth data structure’ while an Arraylist is a ‘variable length Collection class’. This means that the legnth of an array cannot be cahnced after being created, but the legnth of an Arraylist can. In addition, since ArrayList implements the Collection interface, it can only store ‘objects’, whereas arrays can store both ‘objects’ and ‘primitives’ such as int, boolean, char, etc. To make an ArrayList of integers, for example, we would need to convert integers into an object.</p>
+
+<h1 id="declaring-arrays">Declaring Arrays</h1>
+
+<p>There are two ways to declare and initialize arryas:</p>
+
+<p>## 1) Declaring and initializing at the same time</p>
+
+<p>Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+
+
+  <span class="kt">int</span><span class="o">[]</span> <span class="n">numList</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">};</span>
+
+  
+
+<span class="o">}</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Here, the declaring part - which declares the type and name of the array - and the initializing part - which initializes the elements in the arrays - are combined into one line.</p>
+
+<p>## 2) Declaring then initializing later</p>
+
+<p>Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+  
+
+  <span class="kt">int</span><span class="o">[]</span> <span class="n">numList</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">7</span><span class="o">];</span>
+
+  <span class="n">numList</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+
+  <span class="n">numList</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+
+  <span class="n">numList</span><span class="o">[</span><span class="mi">6</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+
+  
+
+<span class="o">}</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Here, we first declared the type, name, and length of the array. Then, initialized by assigning a value to each index of the array.</p>
+
+<h1 id="declaring-arraylists">Declaring ArrayLists</h1>
+
+<p>Like declaring arrays, there are multiple ways to declare ArrayLists as well</p>
+
+<h2 id="1-initialization-with-add">1) Initialization with add()</h2>
+
+<p>Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+
+
+  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+
+  
+
+  <span class="n">example</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"this"</span><span class="o">);</span>
+
+  <span class="n">example</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"is"</span><span class="o">);</span>
+
+  <span class="n">example</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"an"</span><span class="o">);</span>
+
+  <span class="n">example</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"example"</span><span class="o">);</span>
+
+ 
+
+ <span class="o">}</span>
+
+ 
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Here, we first created the ArrayList with the type (String) and the name (example). Then, we initialized the elements with add().</p>
+
+<p>## 2) Initialize using asList()</p>
+
+<p>Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>
+ 
+
+ <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+
+ 
+
+  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;(</span>
+
+    <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"this"</span><span class="o">,</span> <span class="s">"is"</span><span class="o">,</span> <span class="s">"an"</span><span class="o">,</span> <span class="s">"example"</span><span class="o">));</span>
+
+    
+
+<span class="o">}</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Here, the ArrayList is declared and initialized all at once by initializing the Strings using asList().</p>
+
+<h2 id="3-initialize-using-listof">3) Initialize using List.of()</h2>
+
+<p>Example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[])</span> <span class="o">{</span>
+
+
+
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">example</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;(</span>
+
+    <span class="n">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">"this"</span><span class="o">,</span> <span class="s">"is"</span><span class="o">,</span> <span class="s">"an"</span><span class="o">,</span> <span class="s">"example"</span><span class="o">));</span>
+
+    
+
+<span class="o">}</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>List asList(), this method declared and initialized the ArrayList all at once.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-10-30">30 Oct 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#java">java</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#arraylists">#arraylists</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#arrays">#arrays</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#java">#java</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//021-type-comparison/"> &laquo; Type Comparison</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//001-flexbox/">Getting Started with Flexbox &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#vendor">vendor (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#bundle">bundle (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ruby">ruby (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#2.5.0">2.5.0 (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#gems">gems (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-feed-0.11.0">jekyll-feed-0.11.0 (10)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#spec">spec (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fixtures">fixtures (18)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#news">news (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-sitemap-1.2.0">jekyll-sitemap-1.2.0 (8)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#updates">updates (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-paginate-1.1.0">jekyll-paginate-1.1.0 (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#source">source (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-3.8.5">jekyll-3.8.5 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#lib">lib (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#site_template">site_template (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll">jekyll (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#update">update (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

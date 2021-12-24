@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>How to create and remove directory in linux. | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to create and remove directory in linux. | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to create and remove directory in linux." />
+<meta name="author" content="Sourabh Yadav" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The mkdir command is used to create a new directory. The command can also be used to create multiple and nested directories too." />
+<meta property="og:description" content="The mkdir command is used to create a new directory. The command can also be used to create multiple and nested directories too." />
+<link rel="canonical" href="http://localhost:4000/003-Create-and-remove-dir/" />
+<meta property="og:url" content="http://localhost:4000/003-Create-and-remove-dir/" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/dir1.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-28T08:21:54+01:00" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Sourabh Yadav"},"@type":"BlogPosting","headline":"How to create and remove directory in linux.","dateModified":"2020-10-28T08:21:54+01:00","datePublished":"2020-10-28T08:21:54+01:00","image":"http://localhost:4000/assets/images/dir1.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/003-Create-and-remove-dir/"},"url":"http://localhost:4000/003-Create-and-remove-dir/","author":{"@type":"Person","name":"Sourabh Yadav"},"description":"The mkdir command is used to create a new directory. The command can also be used to create multiple and nested directories too.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How to create and remove directory in linux.&url=http://localhost:4000/003-Create-and-remove-dir/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/003-Create-and-remove-dir/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/003-Create-and-remove-dir/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/2d1374cc69f6aed202e9360e1ef44413?s=250&d=mm&r=x" alt="Sourabh Yadav" title="Sourabh Yadav">
+                        
+                        <div>
+                            By Sourabh Yadav
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How to create and remove directory in linux.</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/dir1.svg" alt="How to create and remove directory in linux.">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>The <code class="highlighter-rouge">mkdir</code> command is used to create a new directory. The command can also be used to create multiple and nested directories too.</p>
+
+<p><code class="highlighter-rouge">mkdir</code> command Syntax:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">mkdir   </span>Directory_Name
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">mkdir   </span>Directory1
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>use the <code class="highlighter-rouge">ls</code> command mentioned in <a href="linux/001-list-files-with-dot.md">001-list-files-with-dot.md</a> file and you will see  the directory is created.</p>
+
+<p>shall return</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+Directory1
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Let’s make multiple directories at once. To do so we will use the mkdir command with space after every directory name.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">mkdir   </span>Dir1 Dir2 Dir3
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>shall return</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+Dir1 Dir2 Dir3 
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To create parent directories using the <code class="highlighter-rouge">mkdir</code> command and pass the <code class="highlighter-rouge">-p</code> option. By using this option you can create a nested directory.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">mkdir</span> <span class="nt">-p</span> Dir_out/Dir_in/Last
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>shall return</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>
+Dir_out
+
+└── Dir_in
+
+    └── Last
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">rmdir</code> command is used to remove a directory(it is like the delete folder option in windows) the directory deleted using the <code class="highlighter-rouge">rmdir</code> command can not be restored again. This command can not be used to remove</p>
+
+<p>a directory with files and sub directory inside them, To do so we use the <code class="highlighter-rouge">rm</code> command</p>
+
+<p><code class="highlighter-rouge">rmdir</code> command Syntax:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">rmdir   </span>Directory_Name
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Example: let’s suppose we have created three directory  by using <code class="highlighter-rouge">mkdir Dir1 Dir2 Dir3</code> now we will remove the Dir1.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">rmdir   </span>Dir1
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>shall return</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+Dir2 Dir3 
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To delete a directory having more directories and files inside them we use the <code class="highlighter-rouge">rm</code> command with <code class="highlighter-rouge">-r</code> option. Let’s have two directory Dir1 and  Dir_out having Dir_in, inside</p>
+
+<p>it. If we use the <code class="highlighter-rouge">rmdir</code> command To remove the Dir_out it will give you an error as Directory not empty. To delete it we use the rm command.</p>
+
+<p><code class="highlighter-rouge">rm</code> command Syntax:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">rm</span> <span class="nt">-r</span>  directory_name
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">rm</span> <span class="nt">-r</span>  Dir_out
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>shall return</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+Dir1
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-28">28 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#linux">linux</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#linux">#linux</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#mkdir(make-dir)-and-rmdir(remove-dir-command)-command">#mkdir(make-dir) and rmdir(remove-dir command) command</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//007-backend-fontend-with-javascript/"> &laquo; Controlling backend and frontend with just one language, JavaScript</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//010-difference-between-java-7-and-java-8/">Java 7 vs Java 8 &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#vendor">vendor (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#bundle">bundle (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ruby">ruby (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#2.5.0">2.5.0 (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#gems">gems (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-feed-0.11.0">jekyll-feed-0.11.0 (10)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#spec">spec (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fixtures">fixtures (18)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#news">news (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-sitemap-1.2.0">jekyll-sitemap-1.2.0 (8)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#updates">updates (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-paginate-1.1.0">jekyll-paginate-1.1.0 (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#source">source (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-3.8.5">jekyll-3.8.5 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#lib">lib (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#site_template">site_template (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll">jekyll (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#update">update (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

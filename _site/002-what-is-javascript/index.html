@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>A brief introduction to what is JavaScript and why it is popular | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>A brief introduction to what is JavaScript and why it is popular | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="A brief introduction to what is JavaScript and why it is popular" />
+<meta name="author" content="Parwinder Bhagat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Definition" />
+<meta property="og:description" content="Definition" />
+<link rel="canonical" href="http://localhost:4000/002-what-is-javascript/" />
+<meta property="og:url" content="http://localhost:4000/002-what-is-javascript/" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/javascript/js.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-17T20:22:20+02:00" />
+<script type="application/ld+json">
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Parwinder Bhagat"},"@type":"BlogPosting","headline":"A brief introduction to what is JavaScript and why it is popular","dateModified":"2020-10-17T20:22:20+02:00","datePublished":"2020-10-17T20:22:20+02:00","image":"http://localhost:4000/assets/images/javascript/js.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/002-what-is-javascript/"},"url":"http://localhost:4000/002-what-is-javascript/","author":{"@type":"Person","name":"Parwinder Bhagat"},"description":"Definition","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=A brief introduction to what is JavaScript and why it is popular&url=http://localhost:4000/002-what-is-javascript/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/002-what-is-javascript/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/002-what-is-javascript/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/dc97307464fbfd2620b963733d33e6d3?s=250&d=mm&r=x" alt="Parwinder Bhagat" title="Parwinder Bhagat">
+                        
+                        <div>
+                            By Parwinder Bhagat
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">A brief introduction to what is JavaScript and why it is popular</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/javascript/js.svg" alt="A brief introduction to what is JavaScript and why it is popular">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h2 id="definition">Definition</h2>
+
+<p>A direct quote from the Mozilla developer’s network or <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">MDN</a></p>
+
+<blockquote>
+  <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.</p>
+</blockquote>
+
+<p>In short, it makes your pages feel more dynamic. A webpage generally speaking consists of three key elements:</p>
+
+<ol>
+  <li>
+    <p><strong>HTML</strong> (Hypertext Markup Language): This allows you to create the structure of the web page</p>
+  </li>
+  <li>
+    <p><strong>CSS</strong> (Cascading stylesheet): This is to make that web page look pretty 😊</p>
+  </li>
+  <li>
+    <p><strong>JavaScript</strong>: Allows you to do anything dynamic with the page including fetching data from a server or making the page interactive</p>
+  </li>
+</ol>
+
+<h2 id="history">History</h2>
+
+<p>JavaScript was not always known as JavaScript. It started with the name <code class="highlighter-rouge">LiveScript</code>. At the time of creation of JavaScript, Java was a common language, and it was decided to add the word Java to it. It does not have any relationship with Java, in any case. There is a famous/corny saying</p>
+
+<blockquote>
+  <p>Java is to JavaScript as a car is to carpet</p>
+</blockquote>
+
+<p>As it evolved, it got to be known as <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a>. The name JavaScript is a trademark owned by Oracle Corp. in the United States. Don’t believe me? <a href="http://tsdr.uspto.gov/#caseNumber=75026640&amp;caseType=SERIAL_NO&amp;searchType=statusSearch">Check it out</a></p>
+
+<h2 id="why-is-javascript-popular">Why is JavaScript popular?</h2>
+
+<p>When I say JavaScript is popular, I mean it. According to the <a href="https://insights.stackoverflow.com/survey/2019#technology">Stack Overflow 2019 developer’s survey</a>, it is the most popular language. For 7 years in a row!</p>
+
+<p>So what makes it so famous?</p>
+
+<ol>
+  <li>
+    <p>It works well with the other two components of a webpage (HTML and CSS)</p>
+  </li>
+  <li>
+    <p>Minimal learning curve (which has been considered a good or bad for the language)</p>
+  </li>
+  <li>
+    <p>Supported by all major browsers and enabled by default</p>
+  </li>
+  <li>
+    <p>Works without any compilation or transpiling</p>
+  </li>
+  <li>
+    <p>It can run in the browser or server-side. It can run on anything that can support the JavaScript engine (V8, Trident, SpiderMonkey)</p>
+  </li>
+</ol>
+
+<p>Hopefully, by now, I have sold you on the idea of JavaScript and why it is fun to work with. In the next few blog posts, we will go over the basics of running JavaScript and introduction to principles of JavaScript. As we take a deeper dive into these basics, you will also realize that it’s relatively easy to make mistakes if you don’t know what you are doing. We will learn from the mistakes of the past and try to be a better JavaScript developer.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-17">17 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#javascript">javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#beginner">#beginner</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#codenewbie">#codenewbie</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#es6">#es6</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#javascript">#javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//005-List-Interface-in-Java/"> &laquo; List interface in Java</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//003-types-in-javascript/">Variable types in JavaScript &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#vendor">vendor (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#bundle">bundle (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ruby">ruby (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#2.5.0">2.5.0 (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#gems">gems (25)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-feed-0.11.0">jekyll-feed-0.11.0 (10)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#spec">spec (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fixtures">fixtures (18)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#news">news (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-sitemap-1.2.0">jekyll-sitemap-1.2.0 (8)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#updates">updates (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-paginate-1.1.0">jekyll-paginate-1.1.0 (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#source">source (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll-3.8.5">jekyll-3.8.5 (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#lib">lib (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#site_template">site_template (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#jekyll">jekyll (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#update">update (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>
