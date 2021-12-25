@@ -101,6 +101,11 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
 # Environments
 .env
 .venv
