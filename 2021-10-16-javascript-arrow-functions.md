@@ -4,7 +4,7 @@ title: JavaScript Arrow Functions
 tags:
   - development
     - javascript
-date: "10/16/2021"
+date: "10/1/2021"
 keywords: javascript, functions
 categories: javascript
 image: assets/images/javascript/arrow.svg
