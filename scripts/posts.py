@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 from datetime import datetime
-from os import path, listdir, getcwd, chdir
+from os import path, listdir, getcwd, chdir, rename
 import subprocess
 
 from dateutil.parser import parse as dt_parse
@@ -64,12 +64,13 @@ def transform_post(category, post_file, dest_dir, featured):
         print('Failed to get author email: ', e)
 
     file_name = path.basename(post_file)
-
+    print('^', file_name[4:])
+    name = file_name[4:]
     file_name = '{}-{}'.format(
         post_date.strftime('%Y-%m-%d'),
-        file_name,
+        name,
     )
-
+    #print(file_name)
     post_id = frontmatter.get('id')
     if post_id and post_id in featured:
         frontmatter['featured'] = True
@@ -86,7 +87,8 @@ def transform_post(category, post_file, dest_dir, featured):
             tf.write('---\n')
             tf.write('\n')
             tf.write('\n'.join(pf_content))
-
+    rename(post_file, file_name)
+    
 def read_frontmatter(post_file):
     frontmatter = []
 
@@ -148,7 +150,6 @@ def load_featured(file_path):
 
 if __name__ == '__main__':
     parser = ArgumentParser(description='Transform the FlashReads posts to Jekyll-style MD posts.')
-
     parser.add_argument('-s', '--source', type=str, dest='src_dir', help='The source directory where the flash-reads posts are contained.')
     parser.add_argument('-d', '--dest', type=str, dest='dest_dir', help='The destination directory where the Jekyll-style posts will reside - usually <repo>/_posts.')
     parser.add_argument('-f', '--featured', type=str, dest='featured_path', help='File containing the featured posts by id, separated by a comma.')
