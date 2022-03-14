@@ -11,7 +11,6 @@ meta-description: Learn how to use Map interface to store, manipulate data in Ja
 tags: [java, collection, API, Map, HashMap, LinkedHashMap, TreeMap]
 template: post
 title: Map Interface in Java
-title_new: map-interface-in-java.md
 ---
 
 

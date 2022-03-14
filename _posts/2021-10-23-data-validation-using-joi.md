@@ -10,7 +10,6 @@ layout: post
 meta-description: Learn how to validate data using Joi to prevent SQL injection attacks.
 tags: [javascript, data, joi, validation]
 title: Performing Data Validation using JOI
-title_new: data-validation-using-joi.md
 ---
 
 

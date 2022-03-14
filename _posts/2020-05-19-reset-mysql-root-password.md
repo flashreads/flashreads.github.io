@@ -11,7 +11,6 @@ meta-description: Reset MySQL root password in 5 steps
 tags: [mysql, databases, mariadb]
 template: post
 title: How to reset the MySQL root password
-title_new: reset-mysql-root-password.md
 ---
 
 

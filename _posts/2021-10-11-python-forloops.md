@@ -11,7 +11,6 @@ meta-description: Using Forloops in Python
 tags: [python, random]
 template: post
 title: Forloops in Python
-title_new: python-forloops.md
 ---
 
 

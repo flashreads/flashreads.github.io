@@ -12,7 +12,6 @@ meta-description: What is Primary Key?How it is implemented?How it is deleted an
 tags: [Primary_key, implementation, Composite_key]
 template: post
 title: PRIMARY KEY IN SQL
-title_new: primary_key_sql.md
 ---
 
 

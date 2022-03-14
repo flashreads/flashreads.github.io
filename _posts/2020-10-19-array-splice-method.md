@@ -11,7 +11,6 @@ meta-description: Learn JavaScript array.splice() method
 tags: [javascript, es6, beginner, codenewbie]
 template: post
 title: JavaScript Array.splice() Method
-title_new: array-splice-method.md
 ---
 
 

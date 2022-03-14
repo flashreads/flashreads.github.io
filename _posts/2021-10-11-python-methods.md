@@ -11,7 +11,6 @@ meta-description: Creating Object Oriented Methods
 tags: [python, random]
 template: post
 title: Creating Object Oriented methods
-title_new: python-methods.md
 ---
 
 

@@ -13,7 +13,6 @@ meta-description: Learn how to catch and fix NullPointerException in Java
 tags: [nullpointerexception, exception, runtimeexception]
 template: post
 title: Catch and fix NullPointerException in Java
-title_new: catch-and-fix-null-pointer-exception-in-java.md
 ---
 
 

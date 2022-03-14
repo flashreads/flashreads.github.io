@@ -11,7 +11,6 @@ meta-description: What are persistent data structures? Learn in one minute.
 tags: [data-structure, python, optimization]
 template: post
 title: Persistent Data Structures
-title_new: persistent-data-structures.md
 ---
 
 

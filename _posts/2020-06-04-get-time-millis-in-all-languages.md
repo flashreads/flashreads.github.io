@@ -16,7 +16,6 @@ tags: [current-time, millis, milliseconds, python, javascript, java, golang, c-s
   matlab, octave, R]
 template: post
 title: Get current time in milliseconds in all popular programing languages
-title_new: get-time-millis-in-all-languages.md
 ---
 
 

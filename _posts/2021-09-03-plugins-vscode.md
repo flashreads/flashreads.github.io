@@ -10,7 +10,6 @@ layout: post
 meta-description: Some useful plugins/extensions for VSCode IDE.
 tags: [IDE, VScode, Plugin]
 title: Useful Plugins to VS Code
-title_new: plugins-vscode.md
 ---
 
 

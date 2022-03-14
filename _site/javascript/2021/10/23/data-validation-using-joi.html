@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>Performing Data Validation using JOI | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Performing Data Validation using JOI | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Performing Data Validation using JOI" />
+<meta name="author" content="Victory Nwani" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data Validation in Node.js Applications Using Joi" />
+<meta property="og:description" content="Data Validation in Node.js Applications Using Joi" />
+<link rel="canonical" href="http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html" />
+<meta property="og:url" content="http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/javascript/data.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-23T00:00:00+02:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-23T00:00:00+02:00","@type":"BlogPosting","image":"http://localhost:4000/assets/images/javascript/data.svg","dateModified":"2021-10-23T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html"},"url":"http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html","author":{"@type":"Person","name":"Victory Nwani"},"description":"Data Validation in Node.js Applications Using Joi","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Victory Nwani"},"headline":"Performing Data Validation using JOI","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- 
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" rel="stylesheet" defer>
+    
+<link href="/assets/css/screen.css" rel="stylesheet" defer>
+
+<link href="/assets/css/main.css" rel="stylesheet" defer>
+-->
+<link rel="stylesheet" href="/assets/css/styles.pure.css" rel="stylesheet" defer>
+<script src="/assets/js/jquery.min.js" defer></script>
+<meta name="google-site-verification" content="w8QmqtnEf96t3O1LZ1oe-ShyFPKLK14SW4c9kqnB5PE" />
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.min.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Performing Data Validation using JOI&url=http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/javascript/2021/10/23/data-validation-using-joi.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/42816142c06db38652895876f5b8b6dc?s=250&d=mm&r=x" alt="Victory Nwani" title="Victory Nwani">
+                        
+                        <div>
+                            By Victory Nwani
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Performing Data Validation using JOI</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/javascript/data.svg" alt="Performing Data Validation using JOI">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h1 id="data-validation-in-nodejs-applications-using-joi">Data Validation in Node.js Applications Using Joi</h1>
+
+<p>Every application built consists of data. Be it a Web, Mobile or even Console based application, data is either displayed or accepted from a user as an input. Before you store the user input recieved, data validation is highly recommended to prevent the risk of a malicious SQL query being executed on your database. You can perform the data validation directly from the client side application where the input is recieved, and also at your server side application, before the data is stored. A Node.js package which you can use to perform data validation in Node.js applications is Joi.</p>
+
+<p>Let’s proceed to get simplified understanding of Joi and see examples of how it can be used.</p>
+
+<h2 id="what-is-joi">What is Joi?</h2>
+
+<p>As described in the <a href="https://joi.dev/">Joi</a> documentation, “Joi is a data validator library for JavaScript”. Joi’s comprehensive API provides support for validating the data type of a value, and can also be extended to validate properties of a string. For example, checking the length of a string, or checking if a value is a valid email, or date within a specified range.</p>
+
+<p>The first step to take when using Joi is to construct a schema. At it’s basics, a Joi schema is an object with fields that model the data being validated agaisnt. Let’s proceed to construct a schema for a user’s data within an imaginary application.</p>
+
+<h2 id="modeling-a-user-data-schema">Modeling A User Data Schema</h2>
+
+<p>For the imaginary application, we would expect that a user’s data must contain the following three fields;</p>
+
+<ul>
+  <li>
+    <p>A name field containing a string data type that has a minimum length of 5 characters and a maximum character count of 25</p>
+  </li>
+  <li>
+    <p>A description field similar to the name field, but has a minimum acceptable character count of 50 and maximum count of 300.</p>
+  </li>
+  <li>
+    <p>An email field containing a string data type with the “@” character. The email must have a <a href="http://data.iana.org/TLD/tlds-alpha-by-domain.txt">Top Level Domain</a> (TLD) of “.com”. A TLD is the last part of a domain, that is after the dot (.) character.</p>
+  </li>
+</ul>
+
+<pre><code class="language-JavaScript">
+  const Joi = require("joi")
+
+
+
+  const userSchema = Joi.object({
+
+    name: Joi.string().min(3).max(25).required(),
+
+    description: Joi.string().alphanum().min(50).max(250).required(),
+
+    email: Joi.string().email({
+
+      tlds: { allow: ["com"] }
+
+    }).required()
+
+  });
+
+</code></pre>
+
+<p><strong>Note:</strong> Based on the needs for your application, you might have more fields within your schema. Visit the API section of the Joi documentation for a complete list of Joi’s API.</p>
+
+<h2 id="validating-values-using-the-schema">Validating Values Using The Schema</h2>
+
+<p>At this point there is now a <code class="highlighter-rouge">userSchema</code> variable contain a Joi schema that models a user application. Let’s go through the next code snipet below that explains how the schmea can be used.</p>
+
+<p>You can validate data using the schema by calling the <a href="https://joi.dev/api/?v=17.4.2#assertvalue-schema-message-options">assert</a> method within the schema object and passing in the data to be validated agaisnt. The snippet below demonstrates how this is done;</p>
+
+<pre><code class="language-JavaScript">
+const validateData = ({ name, description, email }) =&gt; {
+
+  try {
+
+     Joi.assert({ name, description, email }, userSchema);
+
+  } catch (e) {
+
+    console.log(`Erorr validating data: ${e}`)
+
+  }
+
+}
+
+
+
+validateData({
+
+   name: "John Doe",
+
+    description: "Some pretty long and organized description of me the author",
+
+    email: 'john.doe@gmail.com'
+
+})
+
+</code></pre>
+
+<p>When the <code class="highlighter-rouge">validateData</code> function in the code snippet above is executed, the <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">description</code> and<code class="highlighter-rouge">email</code> arguments passed to the function will be validated using the <a href="https://joi.dev/api/?v=17.4.2#anyvalidatevalue-options">assert</a> method in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try/catch</a> block. If the values don’t meet up with the validation standards, an exception will thrown and handled the catch block.</p>
+
+<p>This forms the basic usage of the Joi Schema to for validating your data. You can also use the <a href="https://joi.dev/api/?v=17.4.2#anyvalidatevalue-options">validate</a> and <a href="https://joi.dev/api/?v=17.4.2#attemptvalue-schema-message-options">attempt</a> methods depending on your application’s needs.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-10-23">23 Oct 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#javascript">javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#data">#data</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#javascript">#javascript</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#joi">#joi</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#validation">#validation</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//html/2021/10/22/accessibility.html"> &laquo; Getting Started with Web Accessibility</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//javascript/2021/10/23/how-operators-work-in-javascript.html">How operators work in Javascript &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" defer></script>
+
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

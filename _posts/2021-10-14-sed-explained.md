@@ -11,7 +11,6 @@ meta-description: Sed is used to manipulate streams from the standard input and 
 tags: [linux, sed]
 template: post
 title: Sed Usage
-title_new: sed-explained.md
 ---
 
 

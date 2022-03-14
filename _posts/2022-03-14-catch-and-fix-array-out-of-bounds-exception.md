@@ -11,7 +11,6 @@ meta-description: Learn how to catch and fix ArrayIndexOutOfBoundsException in J
 tags: [arrayoutofboundsexception, exception, runtimeexception, java exception]
 template: post
 title: Catch and fix ArrayIndexOutOfBoundsException in Java
-title_new: catch-and-fix-array-out-of-bounds-exception.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: Learn about Abstract Classes in Java
 tags: [abstraction, OOP, Class]
 template: post
 title: Abstract Classes in Java
-title_new: abstract-classes-in-java.md
 ---
 
 

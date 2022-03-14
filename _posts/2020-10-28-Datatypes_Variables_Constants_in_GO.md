@@ -12,7 +12,6 @@ meta-description: Understading the basic concepts of  Datatypes, Variables Const
 tags: [GO, Datatypes, Variables, Constants]
 template: post
 title: Understading Datatypes, Variables Constants In GO
-title_new: Datatypes_Variables_Constants_in_GO.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: How to sort strings and avoid unexpected outcomes
 tags: [JavaScript, sort, localeCompare]
 template: post
 title: JavaScript sort trick
-title_new: sort-trick.md
 ---
 
 

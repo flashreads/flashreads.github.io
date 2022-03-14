@@ -12,7 +12,6 @@ meta-description: The difference between NotImplemented and NotImplementedError 
 tags: [python, exceptions]
 template: post
 title: NotImplemented vs NotImplementedError in Python
-title_new: notimplemented-notimplementederror.md
 ---
 
 

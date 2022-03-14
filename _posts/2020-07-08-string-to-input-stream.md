@@ -11,7 +11,6 @@ meta-description: Easily convert String to InputStream in Java
 tags: [java, one-liner, string, input-stream]
 template: post
 title: How to convert String to InputStream in Java
-title_new: string-to-input-stream.md
 ---
 
 

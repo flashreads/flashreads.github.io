@@ -11,7 +11,6 @@ meta-description: How to make use of CSS variables
 tags: [CSS, Variables, CSS Variables]
 template: post
 title: CSS Variables
-title_new: css-variables.md
 ---
 
 

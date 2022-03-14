@@ -11,7 +11,6 @@ meta-description: Natural laguage processing libraries for python.
 tags: [python, NLP, libraries, text processing]
 template: post
 title: Useful Python libraries For Natural Processing
-title_new: LibrariesForNaturalLanguageProcessing.md
 ---
 
 

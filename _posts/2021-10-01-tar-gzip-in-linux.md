@@ -11,7 +11,6 @@ meta-description: Learn how to compress and uncompress files in Linux.
 tags: [linux, compress, uncompress, tar, gzip, gunzip]
 template: post
 title: How to compress and uncompress files in linux.
-title_new: tar-gzip-in-linux.md
 ---
 
 

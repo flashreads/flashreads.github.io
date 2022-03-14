@@ -12,7 +12,6 @@ meta-description: Explanation about what is Bootstrap, advantages , disadvantage
 tags: [html, bootstrap, web development]
 template: post
 title: Bootstrap
-title_new: Bootstrap.md
 ---
 
 

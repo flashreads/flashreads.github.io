@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>Variable types in JavaScript | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Variable types in JavaScript | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Variable types in JavaScript" />
+<meta name="author" content="Parwinder Bhagat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Anytime that you have a value that could be saved in a variable or passed to a function, they can be defined as one of the 7 types in JavaScript. The different types are:" />
+<meta property="og:description" content="Anytime that you have a value that could be saved in a variable or passed to a function, they can be defined as one of the 7 types in JavaScript. The different types are:" />
+<link rel="canonical" href="http://localhost:4000/javascript/2020/10/17/types-in-javascript.html" />
+<meta property="og:url" content="http://localhost:4000/javascript/2020/10/17/types-in-javascript.html" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/javascript/type.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-17T20:22:20+02:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-17T20:22:20+02:00","@type":"BlogPosting","image":"http://localhost:4000/assets/images/javascript/type.svg","dateModified":"2020-10-17T20:22:20+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/javascript/2020/10/17/types-in-javascript.html"},"url":"http://localhost:4000/javascript/2020/10/17/types-in-javascript.html","author":{"@type":"Person","name":"Parwinder Bhagat"},"description":"Anytime that you have a value that could be saved in a variable or passed to a function, they can be defined as one of the 7 types in JavaScript. The different types are:","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Parwinder Bhagat"},"headline":"Variable types in JavaScript","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- 
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" rel="stylesheet" defer>
+    
+<link href="/assets/css/screen.css" rel="stylesheet" defer>
+
+<link href="/assets/css/main.css" rel="stylesheet" defer>
+-->
+<link rel="stylesheet" href="/assets/css/styles.pure.css" rel="stylesheet" defer>
+<script src="/assets/js/jquery.min.js" defer></script>
+<meta name="google-site-verification" content="w8QmqtnEf96t3O1LZ1oe-ShyFPKLK14SW4c9kqnB5PE" />
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.min.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Variable types in JavaScript&url=http://localhost:4000/javascript/2020/10/17/types-in-javascript.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/javascript/2020/10/17/types-in-javascript.html" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/javascript/2020/10/17/types-in-javascript.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/dc97307464fbfd2620b963733d33e6d3?s=250&d=mm&r=x" alt="Parwinder Bhagat" title="Parwinder Bhagat">
+                        
+                        <div>
+                            By Parwinder Bhagat
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Variable types in JavaScript</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/javascript/type.svg" alt="Variable types in JavaScript">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Anytime that you have a value that could be saved in a variable or passed to a function, they can be defined as one of the 7 types in JavaScript. The different types are:</p>
+
+<ol>
+  <li>
+    <p><strong>String</strong> (usually for text).</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>
+<span class="s2">`Mary`</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">string</span> <span class="nx">surrounded</span> <span class="nx">by</span> <span class="nx">backticks</span>
+
+<span class="s1">'John'</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">string</span> <span class="nx">surrounded</span> <span class="nx">by</span> <span class="nx">single</span> <span class="nx">quotes</span>
+
+<span class="s2">"Parwinder"</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">string</span> <span class="nx">surrounded</span> <span class="nx">by</span> <span class="kr">double</span> <span class="nx">quotes</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>All three examples provided above are valid strings. The advantage of using backticks is that it allows you to do multi-line strings. For example,</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>
+<span class="s2">`This is an
+
+example of
+
+a multi
+
+line string`</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Another cool thing about backticks is that it allows you to evaluate expressions in them. This allows you to concatenate dynamic values to strings without using the concatenate operator (<code class="highlighter-rouge">+</code>);</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="kd">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Parwinder"</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello my name is </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span> <span class="c1">// Hello my name is Parwinder</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Number</strong> (for numbers with or without decimals). E.g. 72, or 2.34 are of number type.</p>
+
+    <p>Numbers are not quoted (either by single or double quotes or backticks). JavaScript provides many helper methods to work with number. They are part of <code class="highlighter-rouge">Math</code></p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">20.5</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">21</span>
+
+<span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">20.1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">20</span>
+
+<span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="mf">20.7</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">20</span>
+
+<span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="mf">20.1</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="mi">21</span>
+
+<span class="nb">Math</span><span class="p">.</span><span class="nx">random</span> <span class="o">=&gt;</span> <span class="mf">0.454646447863</span> <span class="c1">// A random number between 0 and 1</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>One of the common questions that many interviewers seem to ask about number addition in JavaScript is</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span> <span class="c1">// 0.30000000000000004</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Yep. It is 0.30000000000000004 instead of simply being 0.3. This is because your browser is doing floating point math. To read up more about it go to <a href="https://0.30000000000000004.com">this link</a></p>
+
+    <p>Also, <code class="highlighter-rouge">NaN</code> is a special type of number that stands for not a number. This happens when you do an operation like dividing a number by string.</p>
+  </li>
+  <li>
+    <p><strong>Boolean</strong> is used to represent <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code></p>
+
+    <p>The presence of something is true, and the absence is false. It is usually calculated if we are making some comparison. For example, isAge &gt; 19 yields true or false, depending on age.</p>
+
+    <p>While we are talking about comparison and boolean. Here is a quick intro to == and ===</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">10</span> <span class="o">==</span> <span class="s2">"10"</span><span class="p">);</span> <span class="c1">// true</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">10</span> <span class="o">===</span> <span class="s2">"10"</span><span class="p">)</span> <span class="c1">// false</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>== only checks for quality of value where as === checks for equality of value and data <strong>type</strong></p>
+  </li>
+  <li>
+    <p><strong>Null</strong></p>
+
+    <p>There are two ways of expressing “nothing” in JS, <code class="highlighter-rouge">null</code> and <code class="highlighter-rouge">undefined</code>. Null is when we have a property, and we have <strong>assigned</strong> it a value of <code class="highlighter-rouge">null</code>—explicitly stating the value of the property to be nothing.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="kd">let</span> <span class="nx">dog</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog</span><span class="p">);</span> <span class="c1">// null</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>Fun fact: <code class="highlighter-rouge">null</code> has a type of <code class="highlighter-rouge">object</code> in JavaScript.</p>
+  </li>
+  <li>
+    <p><strong>Undefined</strong></p>
+
+    <p>In the same spirit of expressing nothing in JS, for JavaScript, when you declare a property but do not assign it any value, it results in undefined.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>
+<span class="kd">let</span> <span class="nx">dog</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog</span><span class="p">);</span> <span class="c1">// undefined</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Symbol</strong> is a new addition to JS and it is used to obtain a unique identifier. The Symbol() function returns a value of type symbol. Every symbol value returned from Symbol() is unique. A symbol value is generally used as an identifier for object properties</p>
+  </li>
+  <li>
+    <p><strong>Object</strong>: Objects in JS are special. Everything in JS is an object. It is used to express a collection of data.</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>
+<span class="kd">const</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="na">first</span><span class="p">:</span> <span class="s2">"Parwinder"</span><span class="p">,</span>
+
+    <span class="na">last</span><span class="p">:</span> <span class="s2">"Bhagat"</span><span class="p">,</span>
+
+    <span class="na">age</span><span class="p">:</span> <span class="mi">33</span>
+
+<span class="p">}</span>
+
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">first</span><span class="p">);</span> <span class="c1">// Parwinder</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">first</span><span class="p">);</span> <span class="c1">// Bhagat</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">first</span><span class="p">);</span> <span class="c1">// 33</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">income</span><span class="p">);</span> <span class="c1">// undefined</span>
+
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-17">17 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#javascript">javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#beginner">#beginner</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#codenewbie">#codenewbie</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#es6">#es6</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#javascript">#javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//java/2020/10/17/List-Interface-in-Java.html"> &laquo; List interface in Java</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//javascript/2020/10/17/what-is-javascript.html">A brief introduction to what is JavaScript and why it is popular &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" defer></script>
+
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

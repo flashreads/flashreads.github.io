@@ -11,7 +11,6 @@ meta-description: Learn JavaScript array.sort() method
 tags: [javascript, es6, beginner, codenewbie]
 template: post
 title: JavaScript Array.sort() Method
-title_new: array-sort-method.md
 ---
 
 

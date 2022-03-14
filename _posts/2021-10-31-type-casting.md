@@ -10,7 +10,6 @@ layout: post
 meta-description: Type Casting in Java
 tags: [java, object, type]
 title: Type Casting
-title_new: type-casting.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: Quick guide for basic memory optimization in HTML5 games
 tags: [javascript, games, gamedev, beginner, memory, optimization]
 template: post
 title: Memory optimization for HTML5 games
-title_new: memory-optimization-for-html5-games.md
 ---
 
 

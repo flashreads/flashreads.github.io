@@ -10,7 +10,6 @@ layout: post
 meta-description: Demistifying Asynchronous Operations in JavaScript
 tags: [development, javascript, eventloop, asynchronous, async, callbacks]
 title: The JavaScript Event Loop
-title_new: the-event-loop.md
 ---
 
 

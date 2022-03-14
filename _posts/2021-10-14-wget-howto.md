@@ -11,7 +11,6 @@ meta-description: Downloanding files in different cases with cli tool wget
 tags: [linux, wget]
 template: post
 title: wget command usage short guide
-title_new: wget-howto.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: How to quickly populate a list using list comprehension
 tags: [python, random]
 template: post
 title: List Comprehension In Python
-title_new: ist-comprehension.md
 ---
 
 

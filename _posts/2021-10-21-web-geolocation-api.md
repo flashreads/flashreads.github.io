@@ -10,7 +10,6 @@ layout: post
 meta-description: Javascript Geolocation API
 tags: [javascript, api, objects, geolocation]
 title: Javascript Geolocation API
-title_new: web-geolocation-api.md
 ---
 
 

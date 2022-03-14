@@ -11,7 +11,6 @@ meta-description: Array methods in JavaScript
 tags: [javascript, es6, hacktoberfest, beginner]
 template: post
 title: Array methods in JavaScript
-title_new: array-methods-in-javascript.md
 ---
 
 

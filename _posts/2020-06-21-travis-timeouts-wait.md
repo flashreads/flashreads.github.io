@@ -11,7 +11,6 @@ layout: post
 tags: [ci, travis-ci, travis]
 template: post
 title: How to increase Travis CI timeout?
-title_new: travis-timeouts-wait.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: What is Symbolic Link?
 tags: [linux, symlink, symbolic-links]
 template: post
 title: Symbolic link
-title_new: symbolic-link.md
 ---
 
 

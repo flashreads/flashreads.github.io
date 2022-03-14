@@ -12,7 +12,6 @@ meta-description: What to do when you want to undo the latest commit in your rep
 tags: [git, revert, git-revert, rest, git-reset, git-rebase]
 template: post
 title: How to undo the latest local commit in Git repository
-title_new: undo-latest-local-commit.md
 ---
 
 

@@ -10,7 +10,6 @@ layout: post
 meta-description: Type Comparison in Java
 tags: ['java, object, type']
 title: Type Comparison
-title_new: type-comparison.md
 ---
 
 

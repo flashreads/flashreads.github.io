@@ -11,7 +11,6 @@ meta-description: Difference Between Git and Github
 tags: [Git, Github]
 template: post
 title: Git and Github
-title_new: git-and-github.md
 ---
 
 

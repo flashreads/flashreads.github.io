@@ -11,7 +11,6 @@ meta-description: Short guide to run pgsql database in Docker container
 tags: [databases, docker, pgsql, postgres]
 template: post
 title: how to run PostgreSQL on Docker
-title_new: Install-postgres-on-docker.md
 ---
 
 

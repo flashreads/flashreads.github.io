@@ -11,7 +11,6 @@ meta-description: Using python to write files
 tags: [python, beginner, data]
 template: post
 title: First steps in writing files in python
-title_new: Write-file.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: NaN, Positive Infinity and Negative Infinity in Java
 tags: [java, nan, infinity, positive-infinity, negative-infinity]
 template: post
 title: NaN and Infinity in Java
-title_new: float-nan-infinity.md
 ---
 
 

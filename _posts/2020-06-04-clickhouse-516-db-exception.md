@@ -11,7 +11,6 @@ meta-description: How to resolve Code 516. DB::Exception from clickhouse-client
 tags: [clickhouse, databases, clickhouse-cli]
 template: post
 title: ClickHouse Code 516. DB::Exception
-title_new: clickhouse-516-db-exception.md
 ---
 
 

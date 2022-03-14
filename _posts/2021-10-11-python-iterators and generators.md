@@ -11,7 +11,6 @@ meta-description: Using iterators and Generators in Python
 tags: [python, random]
 template: post
 title: Iterators and Generators in Python
-title_new: python-iterators and generators.md
 ---
 
 

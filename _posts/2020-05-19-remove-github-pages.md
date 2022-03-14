@@ -11,7 +11,6 @@ meta-description: The missing step for unpublishing the Github pages site
 tags: [git, github, github-pages]
 template: post
 title: How to unpublish GitHub pages site
-title_new: remove-github-pages.md
 ---
 
 

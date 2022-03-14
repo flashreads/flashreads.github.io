@@ -11,7 +11,6 @@ meta-description: Using random to randomize something
 tags: [python, random, beginner]
 template: post
 title: How to make a virtual die roller
-title_new: Using-Random.md
 ---
 
 

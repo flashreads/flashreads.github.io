@@ -11,7 +11,6 @@ meta-description: Using argparse to create a simple command-line interface progr
 tags: [Python, cli, args, argparse]
 template: post
 title: Creating a Command-Line Interface Program With Argparse
-title_new: using-argparse.md
 ---
 
 

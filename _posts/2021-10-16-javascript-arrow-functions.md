@@ -10,7 +10,6 @@ layout: post
 meta-description: Beginner intro to JavaScript Arrow Functions
 tags: [development - javascript]
 title: JavaScript Arrow Functions
-title_new: javascript-arrow-functions.md
 ---
 
 

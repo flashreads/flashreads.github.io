@@ -11,7 +11,6 @@ meta-description: Introduction to variable types in JavaScript
 tags: [javascript, es6, codenewbie, beginner]
 template: post
 title: Variable types in JavaScript
-title_new: types-in-javascript.md
 ---
 
 

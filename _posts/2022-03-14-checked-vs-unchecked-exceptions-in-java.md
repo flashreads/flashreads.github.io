@@ -12,7 +12,6 @@ meta-description: Learn the difference betwen checked and unchecked exceptions i
 tags: [checked, unchecked, exception, runtimeexception, error]
 template: post
 title: Checked VS Unchecked eceptions in Java
-title_new: checked-vs-unchecked-exceptions-in-java.md
 ---
 
 

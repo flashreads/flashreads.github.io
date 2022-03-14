@@ -10,7 +10,6 @@ layout: post
 meta-description: How to use "noopener" or "noreferrer" to open links in new tabs
 tags: [javascript, html, css]
 title: Always use "noopener" or "noreferrer" for links opened in new tabs
-title_new: noopener-noreferrer-for-links.md
 ---
 
 

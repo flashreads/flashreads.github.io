@@ -5,8 +5,8 @@
     <description>Flashreads blogs</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 14 Mar 2022 15:33:51 +0100</pubDate>
-    <lastBuildDate>Mon, 14 Mar 2022 15:33:51 +0100</lastBuildDate>
+    <pubDate>Mon, 14 Mar 2022 15:59:35 +0100</pubDate>
+    <lastBuildDate>Mon, 14 Mar 2022 15:59:35 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -27,9 +27,9 @@
 
 &lt;p&gt;These three categories are broken down into checked and unchecked classifications—error and runtime exceptions and are grouped together as unchecked, which, per their name, are not checked at compile time and can result in runtime errors.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Feb 2022 18:54:13 +0100</pubDate>
-        <link>http://localhost:4000/2022-02-27-checked-vs-unchecked-exceptions-in-java</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-27-checked-vs-unchecked-exceptions-in-java</guid>
+        <pubDate>Mon, 14 Mar 2022 15:47:24 +0100</pubDate>
+        <link>http://localhost:4000/java/exception/2022/03/14/checked-vs-unchecked-exceptions-in-java.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/exception/2022/03/14/checked-vs-unchecked-exceptions-in-java.html</guid>
         
         <category>checked</category>
         
@@ -226,9 +226,9 @@
 
 &lt;p&gt;So next time make sure that you double check your code and prevent &lt;code class=&quot;highlighter-rouge&quot;&gt;NullPointerException&lt;/code&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 27 Feb 2022 18:54:13 +0100</pubDate>
-        <link>http://localhost:4000/2022-02-27-catch-and-fix-null-pointer-exception-in-java</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-27-catch-and-fix-null-pointer-exception-in-java</guid>
+        <pubDate>Mon, 14 Mar 2022 15:47:24 +0100</pubDate>
+        <link>http://localhost:4000/java/exception/2022/03/14/catch-and-fix-null-pointer-exception-in-java.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/exception/2022/03/14/catch-and-fix-null-pointer-exception-in-java.html</guid>
         
         <category>nullpointerexception</category>
         
@@ -308,9 +308,9 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Sun, 27 Feb 2022 18:54:13 +0100</pubDate>
-        <link>http://localhost:4000/2022-02-27-catch-and-fix-array-out-of-bounds-exception</link>
-        <guid isPermaLink="true">http://localhost:4000/2022-02-27-catch-and-fix-array-out-of-bounds-exception</guid>
+        <pubDate>Mon, 14 Mar 2022 15:47:24 +0100</pubDate>
+        <link>http://localhost:4000/java/exception/2022/03/14/catch-and-fix-array-out-of-bounds-exception.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/exception/2022/03/14/catch-and-fix-array-out-of-bounds-exception.html</guid>
         
         <category>arrayoutofboundsexception</category>
         
@@ -514,8 +514,8 @@ You can add many event handlers to one element.
 &lt;p&gt;we use the removeEventListener method correctly. This time when a click event occurs, removeEventListener will remove the function bodyClickHandler which effectively eliminates the listener, and no clicks will generate a message.&lt;/p&gt;
 </description>
         <pubDate>Wed, 10 Nov 2021 09:30:39 +0100</pubDate>
-        <link>http://localhost:4000/2021-11-10-Eventlistener</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-11-10-Eventlistener</guid>
+        <link>http://localhost:4000/javascript/2021/11/10/Eventlistener.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/2021/11/10/Eventlistener.html</guid>
         
         <category>Javascript, es6, Event,function</category>
         
@@ -783,8 +783,8 @@ You can add many event handlers to one element.
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 10 Nov 2021 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2021-11-10-javascript-higher-order-functions-and-Iterators</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-11-10-javascript-higher-order-functions-and-Iterators</guid>
+        <link>http://localhost:4000/javascript/2021/11/10/javascript-higher-order-functions-and-Iterators.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/2021/11/10/javascript-higher-order-functions-and-Iterators.html</guid>
         
         <category>development</category>
         
@@ -887,8 +887,8 @@ You can add many event handlers to one element.
 
 </description>
         <pubDate>Sun, 31 Oct 2021 16:08:39 +0100</pubDate>
-        <link>http://localhost:4000/2021-10-31-type-casting</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-10-31-type-casting</guid>
+        <link>http://localhost:4000/java/2021/10/31/type-casting.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/10/31/type-casting.html</guid>
         
         <category>java</category>
         
@@ -937,8 +937,8 @@ You can add many event handlers to one element.
 &lt;p&gt;Flexbox has other Properties that you can learn here :- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox&lt;/p&gt;
 </description>
         <pubDate>Sun, 31 Oct 2021 00:50:42 +0200</pubDate>
-        <link>http://localhost:4000/2021-10-31-flexbox</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-10-31-flexbox</guid>
+        <link>http://localhost:4000/css,%20flex/css/2021/10/31/flexbox.html</link>
+        <guid isPermaLink="true">http://localhost:4000/css,%20flex/css/2021/10/31/flexbox.html</guid>
         
         <category>css, Flex,</category>
         
@@ -1194,8 +1194,8 @@ You can add many event handlers to one element.
 &lt;p&gt;List asList(), this method declared and initialized the ArrayList all at once.&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Oct 2021 22:10:31 +0200</pubDate>
-        <link>http://localhost:4000/2021-10-30-java-arrays-vs-arraylists</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-10-30-java-arrays-vs-arraylists</guid>
+        <link>http://localhost:4000/java/2021/10/30/java-arrays-vs-arraylists.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/10/30/java-arrays-vs-arraylists.html</guid>
         
         <category>java</category>
         
@@ -1391,8 +1391,8 @@ You can add many event handlers to one element.
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 28 Oct 2021 21:53:39 +0200</pubDate>
-        <link>http://localhost:4000/2021-10-28-type-comparison</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-10-28-type-comparison</guid>
+        <link>http://localhost:4000/java/2021/10/28/type-comparison.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/10/28/type-comparison.html</guid>
         
         <category>java, object, type</category>
         
@@ -1801,8 +1801,8 @@ print('END -', match.end())
 
 </description>
         <pubDate>Thu, 28 Oct 2021 19:05:00 +0200</pubDate>
-        <link>http://localhost:4000/2021-10-28-regex</link>
-        <guid isPermaLink="true">http://localhost:4000/2021-10-28-regex</guid>
+        <link>http://localhost:4000/python/2021/10/28/regex.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2021/10/28/regex.html</guid>
         
         <category>python,nlp,regex</category>
         

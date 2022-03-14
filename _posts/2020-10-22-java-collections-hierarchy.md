@@ -11,7 +11,6 @@ meta-description: Learn about Java Collection Framework hierarchy
 tags: [java, collection, API, List, Set, Queue]
 template: post
 title: Java Collection Hierarchy
-title_new: java-collections-hierarchy.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: How to make your fonts responsive using fluid units
 tags: [CSS, Responsive Fonts, CSS Fonts]
 template: post
 title: CSS Responsive Fonts
-title_new: css-responsive-fonts.md
 ---
 
 

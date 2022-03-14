@@ -11,7 +11,6 @@ meta-description: SFTP Setup in Linux(CENTOS)
 tags: [linux, sftp, ftp, centos]
 template: post
 title: SFTP Configuration in Linux(CENTOS)
-title_new: sftp-setup.md
 ---
 
 

@@ -11,7 +11,6 @@ meta-description: how to read file/directory permissions in linux
 tags: [linux, file permissions]
 template: post
 title: Linux File Permissions
-title_new: reading-linux-file-permissions.md
 ---
 
 

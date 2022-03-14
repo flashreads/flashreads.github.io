@@ -11,7 +11,6 @@ meta-description: Learn how to use List interface to store, manipulate data in J
 tags: [java, collection, list, array list, linked list, vector]
 template: post
 title: List interface in Java
-title_new: List-Interface-in-Java.md
 ---
 
 

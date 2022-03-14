@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>Useful Python libraries For Natural Processing | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Useful Python libraries For Natural Processing | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Useful Python libraries For Natural Processing" />
+<meta name="author" content="V Rahul" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Useful Python libraries For Natural Processing" />
+<meta property="og:description" content="Useful Python libraries For Natural Processing" />
+<link rel="canonical" href="http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html" />
+<meta property="og:url" content="http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/python/speak.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-28T13:05:44+01:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-28T13:05:44+01:00","@type":"BlogPosting","image":"http://localhost:4000/assets/images/python/speak.svg","dateModified":"2020-10-28T13:05:44+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html"},"url":"http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html","author":{"@type":"Person","name":"V Rahul"},"description":"Useful Python libraries For Natural Processing","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"V Rahul"},"headline":"Useful Python libraries For Natural Processing","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- 
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" rel="stylesheet" defer>
+    
+<link href="/assets/css/screen.css" rel="stylesheet" defer>
+
+<link href="/assets/css/main.css" rel="stylesheet" defer>
+-->
+<link rel="stylesheet" href="/assets/css/styles.pure.css" rel="stylesheet" defer>
+<script src="/assets/js/jquery.min.js" defer></script>
+<meta name="google-site-verification" content="w8QmqtnEf96t3O1LZ1oe-ShyFPKLK14SW4c9kqnB5PE" />
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.min.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Useful Python libraries For Natural Processing&url=http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/python/2020/10/28/LibrariesForNaturalLanguageProcessing.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/55c8ddbdb3b55bee8c738f2bbb62a87b?s=250&d=mm&r=x" alt="V Rahul" title="V Rahul">
+                        
+                        <div>
+                            By V Rahul
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Useful Python libraries For Natural Processing</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/python/speak.svg" alt="Useful Python libraries For Natural Processing">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h1 id="useful-python-libraries-for-natural-processing">Useful Python libraries For Natural Processing</h1>
+
+<hr />
+
+<h2 id="1-corenlp">1. CoreNLP</h2>
+
+<p><br /></p>
+
+<p>The <code class="highlighter-rouge">CoreNLP library</code> — a product of Stanford University — was built to be a production-ready natural language processing solution, capable of delivering NLP predictions and analyses at scale. CoreNLP is written in Java, but multiple Python packages and APIs are available for it, including a native Python NLP library called <code class="highlighter-rouge">StanfordNLP</code>.</p>
+
+<p>CoreNLP includes a <code class="highlighter-rouge">broad range of language tools</code>—grammar tagging, named entity recognition, parsing, sentiment analysis, and plenty more. It was designed to be human language agnostic, and currently supports Arabic, Chinese, French, German, and Spanish in addition to English (with Russian, Swedish, and Danish support <code class="highlighter-rouge">available from third parties</code>). CoreNLP also includes a <code class="highlighter-rouge">web API server</code>, a convenient way to serve predictions without too much additional work.</p>
+
+<h2 id="2-genism">2. Genism</h2>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">Gensim</code> does just two things, but does them exceedingly well. Its focus is statistical semantics—analyzing documents for their structure, then scoring other documents based on their similarity.</p>
+
+<p>Gensim can work with very large bodies of text by streaming documents to its analysis engine and performing <code class="highlighter-rouge">unsupervised learning</code> on them incrementally. It can create multiple types of models, each suited to different scenarios: Word2Vec, Doc2Vec, FastText, and Latent Dirichlet Allocation.</p>
+
+<p><br /></p>
+
+<h2 id="3-nltk">3. NLTK</h2>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">The Natural Language Toolkit</code>, or <code class="highlighter-rouge">NLTK</code> for short, is among the best-known and most powerful of the Python natural language processing libraries.<code class="highlighter-rouge">Many corpora (data sets) and trained models</code> are available to use with NLTK out of the box, so you can start experimenting with NLTK right away.</p>
+
+<p><br /></p>
+
+<p>As the documentation states, NLTK provides a wide variety of tools for working with text: “classification, tokenization, stemming, tagging, parsing, and semantic reasoning.” It can also work with <code class="highlighter-rouge">some third-party tools</code> to enhance its functionality.</p>
+
+<h2 id="4-pattern">4. Pattern</h2>
+
+<p><br /></p>
+
+<p>If all you need to do is scrape a popular website and analyze what you find, reach for <code class="highlighter-rouge">Pattern</code>. This natural language processing library is far smaller and narrower than other libraries covered here, but that also means it’s focused on doing one common job really well.</p>
+
+<p>Pattern comes with built-ins for scraping a number of popular web services and sources (Google, Wikipedia, Twitter, Facebook, generic RSS, etc.), all of which are available as Python modules (e.g., <code class="highlighter-rouge">from pattern.web import Twitter</code>). You don’t have to reinvent the wheels for getting data from those sites, with all of their individual quirks. You can then perform a variety of common NLP operations on the data, such as sentiment analysis.</p>
+
+<h2 id="5-pynlpi">5. PyNLPI</h2>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">PyNLPI</code> (pronounced “pineapple”) has only a basic roster of natural language processing functions, but it has some truly useful data-conversion and data-processsing features for NLP data formats.</p>
+
+<p>Most of the NLP functions in PyNLPI are for basic jobs like tokenization or n-gram extraction, along with some statistical functions useful in NLP like Levenshtein distance between strings or Markov chains. Those functions are implemented in pure Python for convenience, so they’re unlikely to have production-level performance.</p>
+
+<p><br /></p>
+
+<p><br /></p>
+
+<p><em>Thanks for reading, cheers!</em></p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-10-28">28 Oct 2020</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#python">python</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#NLP">#NLP</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#libraries">#libraries</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#python">#python</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#text-processing">#text processing</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//java/2020/10/28/difference-between-java-7-and-java-8.html"> &laquo; Java 7 vs Java 8</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//other/2020/10/28/persistent-data-structures.html">Persistent Data Structures &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" defer></script>
+
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

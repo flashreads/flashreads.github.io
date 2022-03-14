@@ -11,7 +11,6 @@ meta-description: Understanding data structures
 tags: [python, beginner, data structures]
 template: post
 title: DataStructures - Basic concept
-title_new: DataStructures.md
 ---
 
 

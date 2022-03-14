@@ -11,7 +11,6 @@ meta-description: How to read in Pandas files that give you unicodeescape error.
 tags: [python, pandas]
 template: post
 title: Pandas read files
-title_new: pandas-read-file-backslash.md
 ---
 
 
