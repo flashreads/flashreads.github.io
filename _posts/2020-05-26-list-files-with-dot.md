@@ -11,6 +11,7 @@ meta-description: How to list all files in a Linux directory
 tags: [linux, ls, list-command]
 template: post
 title: How to list `dot` files in Linux
+title_new: list-files-with-dot.md
 ---
 
 

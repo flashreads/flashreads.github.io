@@ -12,6 +12,7 @@ meta-description: How to simplify the man command and get short quick definition
 tags: [linux, man commands, tldr]
 template: post
 title: TLDR community pages to simplify man commands in linux.
+title_new: simplify-man-commands-in-linux.md
 ---
 
 

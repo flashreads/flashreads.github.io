@@ -11,6 +11,7 @@ meta-description: Checkout remote Git branch with one command
 tags: [git, git-remote, git-checkout, git-branches]
 template: post
 title: How to check out a remote Git branch
+title_new: checkout-remote-branch.md
 ---
 
 

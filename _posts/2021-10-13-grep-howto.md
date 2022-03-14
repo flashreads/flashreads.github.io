@@ -11,6 +11,7 @@ meta-description: Grep is an ultimate command to search text patterns in files
 tags: [linux, grep]
 template: post
 title: Grep command usage cheatsheet
+title_new: grep-howto.md
 ---
 
 

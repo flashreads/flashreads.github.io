@@ -11,6 +11,7 @@ meta-description: Why binary serch trees are important
 tags: [python, random]
 template: post
 title: What are Binary serch tree in python
+title_new: Binary-serch-tree.md
 ---
 
 

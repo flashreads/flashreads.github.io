@@ -12,6 +12,7 @@ meta-description: High level explanation of Linux directory structure and file s
 tags: [linux, linux-directoy, bin, etc, dev, root, home, lib, sbin]
 template: post
 title: Linux directories structure explained
+title_new: linux-dirs-explained.md
 ---
 
 

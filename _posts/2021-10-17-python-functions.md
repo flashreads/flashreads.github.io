@@ -11,6 +11,7 @@ meta-description: Creating functions in python
 tags: [python, random]
 template: post
 title: Creating functions in Python
+title_new: python-functions.md
 ---
 
 

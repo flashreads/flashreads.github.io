@@ -11,6 +11,7 @@ meta-description: null
 tags: [python]
 template: post
 title: Requests library in Python
+title_new: equests-library.md
 ---
 
 

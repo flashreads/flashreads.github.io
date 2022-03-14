@@ -11,6 +11,7 @@ meta-description: Learn about the differences between Arrays and ArrayLists in J
 tags: [java, arraylists, arrays]
 template: post
 title: Arrays vs. ArrayLists in Java
+title_new: java-arrays-vs-arraylists.md
 ---
 
 

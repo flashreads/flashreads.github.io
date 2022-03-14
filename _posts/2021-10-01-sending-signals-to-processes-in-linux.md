@@ -11,6 +11,7 @@ meta-description: How to control processes in linux by sending signals.
 tags: [linux, process management, controlling processes by sending signals]
 template: post
 title: Sending Signals For Controlling Processes In Linux.
+title_new: sending-signals-to-processes-in-linux.md
 ---
 
 

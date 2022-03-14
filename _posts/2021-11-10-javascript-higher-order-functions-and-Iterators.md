@@ -11,6 +11,7 @@ meta-description: Learn about JavaScript higher order functions and Iterators
 tags: [development, javascript, higher order functions, map, sort, forEach, reduce,
   es6, JS functions, callbacks]
 title: Javascript higher-order functions and Iterators
+title_new: javascript-higher-order-functions-and-Iterators.md
 ---
 
 

@@ -10,6 +10,7 @@ layout: post
 meta-description: insertion sort in python
 tags: [python, insertion sort, sorting, algorithms]
 title: Insertion Sort in Python
+title_new: insertion-sort-python.md
 ---
 
 

@@ -12,6 +12,7 @@ meta-description: Rsync is a remote and local file synchronization tool for sync
 tags: [linux, rsync, synchronization]
 template: post
 title: How to synchronize remote and local directories using rsync.
+title_new: rsync-for-syncing-remote-local-directories.md
 ---
 
 

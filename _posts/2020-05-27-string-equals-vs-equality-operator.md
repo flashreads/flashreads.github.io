@@ -11,6 +11,7 @@ meta-description: Learn how to properly compare string values in Java.
 tags: [java, equals, comparison]
 template: post
 title: Java String.equals vs '=='
+title_new: string-equals-vs-equality-operator.md
 ---
 
 

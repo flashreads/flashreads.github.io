@@ -12,6 +12,7 @@ meta-description: Generate the requirements.txt file with libraries that you nee
 tags: [python, libraries, install, requirements]
 template: post
 title: Generate requirements.txt file with packages that you need for project.
+title_new: python-generate-requirements-file.md
 ---
 
 

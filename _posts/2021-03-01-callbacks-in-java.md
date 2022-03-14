@@ -12,6 +12,7 @@ meta-description: how to use callbacks to perform some tasks after an asynchronu
 tags: [java, interface, callbacks, asynchronus calls]
 template: post
 title: CallBacks in Java
+title_new: callbacks-in-java.md
 ---
 
 

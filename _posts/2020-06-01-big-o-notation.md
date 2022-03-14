@@ -11,6 +11,7 @@ meta-description: A beginners guide to the Big O notation
 tags: [python, exceptions]
 template: post
 title: What is Big O notation?
+title_new: big-o-notation.md
 ---
 
 

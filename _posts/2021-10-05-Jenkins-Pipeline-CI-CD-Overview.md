@@ -11,6 +11,7 @@ meta-description: Maintaining Continuous Integration Pipelines using Jenkins DSL
 tags: [ci, jenkins-pipeline, jenkins-ci]
 template: post
 title: Jenkins Pipeline Example.
+title_new: Jenkins-Pipeline-CI-CD-Overview.md
 ---
 
 

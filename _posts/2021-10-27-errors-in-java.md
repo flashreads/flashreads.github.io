@@ -11,6 +11,7 @@ meta-description: Learn about common errors and its types in Java
 tags: [java, errors, exception]
 template: post
 title: Errors In Java
+title_new: errors-in-java.md
 ---
 
 

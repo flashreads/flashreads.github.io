@@ -11,6 +11,7 @@ meta-description: Useful HTML tricks that we can use to write an effective code.
 tags: [HTML5, Web development, tricks]
 template: post
 title: Lesser Known HTML5 Tricks
+title_new: LesserKnownHTMLTricks.md
 ---
 
 

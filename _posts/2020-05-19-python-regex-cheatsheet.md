@@ -11,6 +11,7 @@ meta-description: The Regular Expression Cheat Sheet [QUICK GUIDE]
 tags: [python, regex]
 template: post
 title: Python Regex Cheat Sheet
+title_new: python-regex-cheatsheet.md
 ---
 
 

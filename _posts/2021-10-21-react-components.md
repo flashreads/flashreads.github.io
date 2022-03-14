@@ -10,6 +10,7 @@ layout: post
 meta-description: React JS Components
 tags: [javascript, library, frontend, DOM, components]
 title: React JS Components
+title_new: react-components.md
 ---
 
 

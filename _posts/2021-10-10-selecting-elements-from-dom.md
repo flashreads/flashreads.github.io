@@ -10,6 +10,7 @@ layout: post
 meta-description: Selecting elements from the DOM with ease.
 tags: [development, javascript, frontend, DOM]
 title: Selecting Elements From The DOM
+title_new: selecting-elements-from-dom.md
 ---
 
 

@@ -11,6 +11,7 @@ meta-description: Learn about Abstract Classes in Java
 tags: [encapsulation, OOP, Class]
 template: post
 title: Data Encapsulation In Java
+title_new: data-encapsulation-java.md
 ---
 
 

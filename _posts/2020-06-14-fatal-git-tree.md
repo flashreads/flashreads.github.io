@@ -11,6 +11,7 @@ meta-description: null
 tags: [git, git-write, git pull]
 template: post
 title: fatal git-write-tree error building trees
+title_new: fatal-git-tree.md
 ---
 
 

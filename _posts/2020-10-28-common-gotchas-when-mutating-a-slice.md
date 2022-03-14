@@ -11,6 +11,7 @@ meta-description: Easy mistakes when mutating a slice in Go, and how to avoid th
 tags: [go, golang]
 template: post
 title: Common gotchas when mutating a slice
+title_new: common-gotchas-when-mutating-a-slice.md
 ---
 
 

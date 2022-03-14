@@ -11,6 +11,7 @@ meta-description: Git for first time
 tags: [Git, Github, Git First Time, Git Installation]
 template: post
 title: Git Installation
+title_new: git-installation.md
 ---
 
 

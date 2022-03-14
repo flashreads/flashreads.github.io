@@ -11,6 +11,7 @@ meta-description: Delete an element from a slice in Go properly and efficiently
 tags: [go, golang, slice, delete]
 template: post
 title: Howto propoerly delete an element from a slice in Go
+title_new: delete-element-from-slice.md
 ---
 
 

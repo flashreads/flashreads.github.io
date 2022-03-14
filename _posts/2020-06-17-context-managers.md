@@ -11,6 +11,7 @@ meta-description: Short introduction to context managers in Python
 tags: [python, python3, python-with, with statement]
 template: post
 title: Python context managers
+title_new: context-managers.md
 ---
 
 

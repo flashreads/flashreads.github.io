@@ -11,6 +11,7 @@ meta-description: See How to install postgres on your linux machine
 tags: [linux, database, postgres]
 template: post
 title: How to install Postgres on Linux (Debian)
+title_new: Install-postgres-on-linux.md
 ---
 
 

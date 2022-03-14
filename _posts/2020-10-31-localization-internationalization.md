@@ -12,6 +12,7 @@ meta-description: Add multiple language support to your application without chan
 tags: [language-support, localization, internationalization]
 template: post
 title: Localization and Internationalization
+title_new: localization-internationalization.md
 ---
 
 

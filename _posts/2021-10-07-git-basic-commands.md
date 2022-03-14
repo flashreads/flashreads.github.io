@@ -12,6 +12,7 @@ meta-description: list of frequently used git commands
 tags: [git, git cheat sheet, git-commands, github]
 template: post
 title: Most Used Commands of Git
+title_new: git-basic-commands.md
 ---
 
 

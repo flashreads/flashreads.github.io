@@ -11,6 +11,7 @@ meta-description: How to easily install Pytorch on Windows with one command
 tags: [python, windows, pip, pytorch, conda]
 template: post
 title: Install Pytorch on Windows
+title_new: install-pytorch-windows.md
 ---
 
 

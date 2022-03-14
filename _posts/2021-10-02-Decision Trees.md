@@ -11,6 +11,7 @@ meta-description: What makes decision trees popular
 tags: [python, random, machine learning]
 template: post
 title: Why Decision trees are so popular in Machine Learning algorithms
+title_new: Decision Trees.md
 ---
 
 

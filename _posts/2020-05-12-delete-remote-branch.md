@@ -11,6 +11,7 @@ meta-description: See how to delete a branch in the local and remote git reposit
 tags: [git, delete-branch, repository, command-line, github, github.com]
 template: post
 title: Git delete a branch remotely
+title_new: delete-remote-branch.md
 ---
 
 

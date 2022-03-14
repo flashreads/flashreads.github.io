@@ -11,6 +11,7 @@ meta-description: Found out the easiest way to get the PyPi downloads statistics
 tags: [python, pypi, pypi-stats]
 template: post
 title: Python package download stats from PyPI
+title_new: find-pypi-downloads.md
 ---
 
 

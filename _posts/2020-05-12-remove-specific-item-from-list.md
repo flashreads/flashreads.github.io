@@ -11,6 +11,7 @@ meta-description: Learn how to remove a specific item from an array in Javascrip
 tags: [javascript, es6, nodejs, array]
 template: post
 title: How to remove a specific item from a list (array) [Javascript]
+title_new: remove-specific-item-from-list.md
 ---
 
 

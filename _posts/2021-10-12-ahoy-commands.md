@@ -10,6 +10,7 @@ layout: post
 meta-description: Automate your scripts
 tags: ['ahoy,', 'bash,', script]
 title: Ahoy Commands
+title_new: ahoy-commands.md
 ---
 
 

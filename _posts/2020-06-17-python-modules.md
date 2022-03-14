@@ -11,6 +11,7 @@ meta-description: Check out what are Python modules and why to use them
 tags: [python, modules, python-modules]
 template: post
 title: Python Modules
+title_new: python-modules.md
 ---
 
 

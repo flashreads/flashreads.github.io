@@ -11,6 +11,7 @@ meta-description: backend and frontend with JavaSript
 tags: [javascript, nodejs, backend, frontend]
 template: post
 title: Controlling backend and frontend with just one language, JavaScript
+title_new: backend-fontend-with-javascript.md
 ---
 
 

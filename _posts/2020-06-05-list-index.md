@@ -11,6 +11,7 @@ meta-description: Finding the index of an item in a list in Python with examples
 tags: [python, lists, list-index]
 template: post
 title: How to find the index of an element in a list
+title_new: list-index.md
 ---
 
 

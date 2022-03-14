@@ -10,6 +10,7 @@ layout: post
 meta-description: generate cryptographically secure random number in Java
 tags: [java, random, crypto]
 title: Cryptographically Secure Random in Java
+title_new: cryptographically-secure-random.md
 ---
 
 

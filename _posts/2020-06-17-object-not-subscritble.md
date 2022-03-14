@@ -11,6 +11,7 @@ meta-description: How to easily resolve the object is not subscriptable error in
 tags: [python, python3, type-error, list, dict]
 template: post
 title: TypeError 'NoneType' object is not subscriptable
+title_new: object-not-subscritble.md
 ---
 
 

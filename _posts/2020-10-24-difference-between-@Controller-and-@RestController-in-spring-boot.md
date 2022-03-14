@@ -11,6 +11,7 @@ meta-description: Learn how to define your controller classes in spring boot mvc
 tags: [java, spring boot, controller, annotation, mvc, rest]
 template: post
 title: Controller vs RestController in Spring Boot
+title_new: difference-between-@Controller-and-@RestController-in-spring-boot.md
 ---
 
 

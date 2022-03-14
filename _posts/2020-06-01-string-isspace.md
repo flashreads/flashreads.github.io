@@ -12,6 +12,7 @@ meta-description: Check if the string is empty or contains tabs, carriage return
 tags: [python, strings]
 template: post
 title: How to check for empty space, tab or newline in Python
+title_new: string-isspace.md
 ---
 
 

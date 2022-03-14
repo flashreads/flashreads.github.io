@@ -10,6 +10,7 @@ layout: post
 meta-description: Read logs of a kubernetes job
 tags: [kubernetes, kubectl, kubernetes-job, logs, cli]
 title: Show Kubernetes Job Logs
+title_new: kubernetes-job-logs.md
 ---
 
 

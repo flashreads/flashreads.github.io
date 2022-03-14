@@ -11,6 +11,7 @@ meta-description: Using matplotlib to create scientific plots
 tags: [python, beginner, plot]
 template: post
 title: How to make an easy plot with matplotlib
+title_new: Using-Matplotlib.md
 ---
 
 

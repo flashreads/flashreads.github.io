@@ -11,6 +11,7 @@ meta-description: change behavior interface in Java 8
 tags: [java, interface, default method, static static]
 template: post
 title: Changes behavior interface - Java 8
+title_new: java-interface-java-8.md
 ---
 
 

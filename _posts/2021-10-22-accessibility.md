@@ -10,6 +10,7 @@ layout: post
 meta-description: A brief introduction into web accessibility
 tags: ['html, wcag, a11y, accessibility']
 title: Getting Started with Web Accessibility
+title_new: accessibility.md
 ---
 
 

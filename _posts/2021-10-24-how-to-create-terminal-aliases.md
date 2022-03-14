@@ -10,6 +10,7 @@ layout: post
 meta-description: How to create terminal aliases
 tags: [alias, terminal, code editor]
 title: How to create terminal aliases
+title_new: how-to-create-terminal-aliases.md
 ---
 
 

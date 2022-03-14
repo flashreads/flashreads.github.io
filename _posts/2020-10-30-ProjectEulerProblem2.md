@@ -11,6 +11,7 @@ meta-description: Learn the about solving project Euler's Problem 2 in Python.
 tags: [Python, Project Euler, Algortithms]
 template: post
 title: Solving Project Euler's Problem 2 with Python
+title_new: ProjectEulerProblem2.md
 ---
 
 

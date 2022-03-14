@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/logo.png">
+
+<title>The JavaScript Event Loop | Flashreads</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>The JavaScript Event Loop | Flashreads</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="The JavaScript Event Loop" />
+<meta name="author" content="Atchyut Preetham Pulavarthi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What are Asynchronous Operations in JavaScript?" />
+<meta property="og:description" content="What are Asynchronous Operations in JavaScript?" />
+<link rel="canonical" href="http://localhost:4000/2021-10-10-the-event-loop" />
+<meta property="og:url" content="http://localhost:4000/2021-10-10-the-event-loop" />
+<meta property="og:site_name" content="Flashreads" />
+<meta property="og:image" content="http://localhost:4000/assets/images/javascript/event.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-10T00:00:00+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","image":"http://localhost:4000/assets/images/javascript/event.svg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2021-10-10-the-event-loop"},"datePublished":"2021-10-10T00:00:00+02:00","url":"http://localhost:4000/2021-10-10-the-event-loop","author":{"@type":"Person","name":"Atchyut Preetham Pulavarthi"},"description":"What are Asynchronous Operations in JavaScript?","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Atchyut Preetham Pulavarthi"},"headline":"The JavaScript Event Loop","dateModified":"2021-10-10T00:00:00+02:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- 
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" rel="stylesheet" defer>
+    
+<link href="/assets/css/screen.css" rel="stylesheet" defer>
+
+<link href="/assets/css/main.css" rel="stylesheet" defer>
+-->
+<link rel="stylesheet" href="/assets/css/styles.pure.css" rel="stylesheet" defer>
+<script src="/assets/js/jquery.min.js" defer></script>
+<meta name="google-site-verification" content="w8QmqtnEf96t3O1LZ1oe-ShyFPKLK14SW4c9kqnB5PE" />
+
+</head>
+
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/assets/images/logo.png" alt="Flashreads">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">               
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/flashreads/blogs"><i class="fab fa-github"></i> Write in GitHub</a>
+                </li>
+
+                <script src="/assets/js/lunr.min.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+    <h1 class="sitetitle">Flashreads</h1>
+    <p class="lead">
+        Flashreads blogs
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=The JavaScript Event Loop&url=http://localhost:4000/2021-10-10-the-event-loop" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=http://localhost:4000/2021-10-10-the-event-loop" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2021-10-10-the-event-loop" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-3 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/dbe7658d157dea18475ad93d4be292a3?s=250&d=mm&r=x" alt="Atchyut Preetham Pulavarthi" title="Atchyut Preetham Pulavarthi">
+                        
+                        <div>
+                            By Atchyut Preetham Pulavarthi
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">The JavaScript Event Loop</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="/assets/images/javascript/event.svg" alt="The JavaScript Event Loop">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h2 id="what-are-asynchronous-operations-in-javascript">What are Asynchronous Operations in JavaScript?</h2>
+
+<p><img src="https://source.unsplash.com/u2d0BPZFXOY/640x426" /></p>
+
+<p>You may already know that the JavaScript V8 engine executes on a single thread, which means if there are synchronous operations that take longer periods of time, they would inturn block the subsequent synchronous operations. Therefore, JavaScript uses asynchronous operations in order to prevent blocking during code execution.</p>
+
+<p>In the JavaScript engine, we have the following components:</p>
+
+<ul>
+  <li>
+    <p>Call Stack</p>
+  </li>
+  <li>
+    <p>Event Loop</p>
+  </li>
+  <li>
+    <p>WEB APIs environment</p>
+  </li>
+  <li>
+    <p>Call-back Queue</p>
+  </li>
+  <li>
+    <p>Micro-task Queue</p>
+  </li>
+</ul>
+
+<p>Whenever there is any asynchronous task, JS moves it to the WEB APIs Environment, for example, when you have an img tag with a very large image in the “src” attribute, this image is not downloaded synchronously, because that would block the thread, instead it is moved into the WEB API Environment where the image is loaded.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="nt">&lt;img</span>  <span class="na">src=</span><span class="s">"largeimg.jpg"</span> <span class="nt">/&gt;</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now, if you want to do something once the image is loaded, you will need to listen to the image’s ‘load’ event.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'img'</span><span class="p">)</span>
+
+<span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Image has been loaded!'</span><span class="p">));</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now once the image has been loaded, this callback function is still not executed, instead now it is moved into the Callback queue. The callback function waits in the callback queue, the event loop will check for synchronous code, and wait until the call stack is empty. Once the call stack is empty, the event loop will push in a first in callback function into the call stack in one event loop tick. And that is when that call back function is executed.</p>
+
+<p>However, this changes when there are micro-tasks such as Promises. When there is a promise, it is sent to the microtask queue. Microtasks will always have priority over the callbacks and they can and will halt the callbacks until they are executed, event loop will always prioritize microtasks.</p>
+
+<p>This is how the JavaScript Call Stack, Event Loop, Call Back Queue, Microtasks Queue and WEB API Environments work.</p>
+
+<h3 id="an-example">An Example</h3>
+
+<p>Here is a code snippet that can gives more clarity on the sequence of execution in JavaScript:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+</pre></td><td class="rouge-code"><pre>
+
+
+<span class="c1">//Synchronous Code - Always prioritized over async code</span>
+
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Asynchronous TEST start'</span><span class="p">);</span>
+
+
+
+<span class="c1">//It is a 0 Second Timer, But a timer is not a microtask</span>
+
+
+
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'0 sec timer'</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+
+
+
+<span class="c1">//Promise is a microtask</span>
+
+
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">'Resolved promise 1'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span>  <span class="o">=&gt;</span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">));</span>
+
+
+
+<span class="c1">//2nd promise is a microtask too</span>
+
+
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">'Resolved promise 2'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span>  <span class="o">=&gt;</span> <span class="p">{</span>
+
+
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span>  <span class="nx">i</span>  <span class="o">=</span>  <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span>  <span class="o">&lt;</span>  <span class="mi">1000000000</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{}</span> <span class="c1">//very large loop</span>
+
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+
+
+
+<span class="p">});</span>  
+
+
+
+<span class="c1">//Synchronous Code - Always prioritized over async code</span>
+
+
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Test end'</span><span class="p">);</span>
+
+
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2021-10-10">10 Oct 2021</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#javascript">javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#async">#async</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#asynchronous">#asynchronous</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#callbacks">#callbacks</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#development">#development</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#eventloop">#eventloop</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#javascript">#javascript</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="//2021-10-10-selecting-elements-from-dom"> &laquo; Selecting Elements From The DOM</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="//2021-10-11-ist-comprehension">List Comprehension In Python &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-12 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (22)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#git">git (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#python">python (38)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#databases">databases (7)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#linux">linux (15)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java">java (24)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#other">other (9)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#html">html (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ci">ci (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#go">go (3)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend,-frontendtips">frontend, frontendtips (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#frontend-development">frontend-development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#java,-c++">java, c++ (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#flowchart">flowchart (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Python">Python (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css,-flex">css, flex (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#css">css (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#Javascript">Javascript (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#exception">exception (3)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" defer></script>
+
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

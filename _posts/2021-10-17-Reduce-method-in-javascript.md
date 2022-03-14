@@ -11,6 +11,7 @@ meta-description: Reduce array method in JavaScript
 tags: [javascript, hacktoberfest, beginner, Array, Reduce]
 template: post
 title: Reduce Array method in JavaScript
+title_new: Reduce-method-in-javascript.md
 ---
 
 

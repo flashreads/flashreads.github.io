@@ -10,6 +10,7 @@ layout: post
 meta-description: brief overview of the blog entry (SEO optimization)
 tags: ['Javascript, es6, Event,function']
 title: Eventlisteners and its use
+title_new: Eventlistener.md
 ---
 
 

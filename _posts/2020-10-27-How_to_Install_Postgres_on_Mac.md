@@ -11,6 +11,7 @@ meta-description: 3 Step Postgrese Installation Guide For Mac.
 tags: [postgres, mac, installation]
 template: post
 title: How to Install Postgres on Mac
+title_new: How_to_Install_Postgres_on_Mac.md
 ---
 
 

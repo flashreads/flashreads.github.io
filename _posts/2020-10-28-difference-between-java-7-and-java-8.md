@@ -11,6 +11,7 @@ meta-description: Learn the difference between Java 7 and Java 8.
 tags: [java 7, Java 8, comparison]
 template: post
 title: Java 7 vs Java 8
+title_new: difference-between-java-7-and-java-8.md
 ---
 
 

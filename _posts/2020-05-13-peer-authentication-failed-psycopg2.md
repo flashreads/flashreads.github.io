@@ -11,6 +11,7 @@ meta-description: Simple steps to avoid psycopg2 Peer authentication
 tags: [psycopg2, postgresql, python, database]
 template: post
 title: Psycopg Peer authentication failed for user "postgres"
+title_new: peer-authentication-failed-psycopg2.md
 ---
 
 

@@ -11,6 +11,7 @@ meta-description: Learn how to use Set interface to store, manipulate data in Ja
 tags: [java, collection, set, hashset, treeset, linkedhashset]
 template: post
 title: Set interface in Java
+title_new: set-interface-in-java.md
 ---
 
 

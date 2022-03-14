@@ -10,6 +10,7 @@ layout: post
 meta-description: Beginner intro to JavaScript Asynchronous Functions
 tags: [development - javascript]
 title: JavaScript Promise Async/Await Functions
+title_new: javascript-promise-async-await-function.md
 ---
 
 

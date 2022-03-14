@@ -12,6 +12,7 @@ meta-description: Curl is data transfer command. This is curl short command guid
 tags: [linux, curl]
 template: post
 title: curl command usage short guide
+title_new: curl-howto.md
 ---
 
 

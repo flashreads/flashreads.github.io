@@ -11,6 +11,7 @@ meta-description: Learn what is SQl and about its commands
 tags: [SQL, database, commands]
 template: post
 title: SQL and its commands
+title_new: SQL-and-its-commands.md
 ---
 
 

@@ -10,6 +10,7 @@ layout: post
 meta-description: Learn how operators work in Javascript
 tags: [javascript, es6, beginner, types, operators]
 title: How operators work in Javascript
+title_new: how-operators-work-in-javascript.md
 ---
 
 

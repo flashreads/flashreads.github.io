@@ -11,6 +11,7 @@ meta-description: Learn what is Python and why it is so popular
 tags: [python, python3, features, beginner]
 template: post
 title: Introduction to Python and its features
+title_new: Features-of-Python.md
 ---
 
 

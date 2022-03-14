@@ -11,6 +11,7 @@ meta-description: Learn about const and let in JavaScript
 tags: [javascript, es6, beginner, const, let]
 template: post
 title: A little about const and let keywords in Javascript
+title_new: const-and-let-in-javascript.md
 ---
 
 

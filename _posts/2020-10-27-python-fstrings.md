@@ -11,6 +11,7 @@ meta-description: Using python to formatings strings
 tags: [python, beginner, strings]
 template: post
 title: f-Strings - A nice way of formatting strings
+title_new: python-fstrings.md
 ---
 
 

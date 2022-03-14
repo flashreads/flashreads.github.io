@@ -11,6 +11,7 @@ meta-description: What to use to check if a string contains a substring in Pytho
 tags: [string, contains, python, python3]
 template: post
 title: Check if a string contains substring in Python
+title_new: string-contains-python.md
 ---
 
 

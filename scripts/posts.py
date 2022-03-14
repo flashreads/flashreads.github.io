@@ -33,6 +33,7 @@ def transform_category(category, src_dir, dest_dir, featured):
 
 
 def transform_post(category, post_file, dest_dir, featured):
+    print('In')
     frontmatter, fm_length = read_frontmatter(post_file)
     post_date = frontmatter.get('date')
     if not post_date:
@@ -64,7 +65,8 @@ def transform_post(category, post_file, dest_dir, featured):
         print('Failed to get author email: ', e)
 
     file_name = path.basename(post_file)
-    print('^', file_name[4:])
+    print('axa', file_name[4:])
+    frontmatter['title_new'] = file_name[4:]
     name = file_name[4:]
     file_name = '{}-{}'.format(
         post_date.strftime('%Y-%m-%d'),
@@ -87,7 +89,7 @@ def transform_post(category, post_file, dest_dir, featured):
             tf.write('---\n')
             tf.write('\n')
             tf.write('\n'.join(pf_content))
-    rename(post_file, file_name)
+    #rename(post_file, file_name)
     
 def read_frontmatter(post_file):
     frontmatter = []

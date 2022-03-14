@@ -11,6 +11,7 @@ meta-description: Learn what JavaScript is and why it is so popular
 tags: [javascript, es6, beginner, codenewbie]
 template: post
 title: A brief introduction to what is JavaScript and why it is popular
+title_new: what-is-javascript.md
 ---
 
 

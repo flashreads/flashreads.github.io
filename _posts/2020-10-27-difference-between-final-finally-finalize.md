@@ -12,6 +12,7 @@ meta-description: Learn the difference between keywords final, finally and final
 tags: [java, final, finally, finalize, comparison]
 template: post
 title: Java Final vs Finally vs Finalize
+title_new: difference-between-final-finally-finalize.md
 ---
 
 

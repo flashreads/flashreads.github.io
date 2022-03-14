@@ -11,6 +11,7 @@ meta-description: How to get rid of the small space under your images
 tags: [CSS, Images, Image Display]
 template: post
 title: FIx for properly displaying images
+title_new: css-image-display-fix.md
 ---
 
 

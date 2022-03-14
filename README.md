@@ -32,7 +32,7 @@ pip install -r scripts/requirements.txt
 Then run the script to transform and generate the blog posts into `_posts`:
 
 ```bash
-python scripts/posts.py --source ~/projects/flashreads/blogs --dest _posts/ --featured featured.txt
+python scripts/posts.py --source ~/MyProjects/blogs --dest _posts/ --featured featured.txt
 ```
 
 That's it. Then run or build jekyll as:
