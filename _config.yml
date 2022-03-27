@@ -4,7 +4,7 @@ title: "Flashreads"
 description: "Flashreads blogs"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: 
+baseurl: theflashreads.com
 google_analytics: ''
 include: ["_pages"]
 permalink: /:title/
