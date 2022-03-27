@@ -33,7 +33,7 @@
                 <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ post.author_email | to_hash }}?s=250&d=mm&r=x" alt="{{ post.author }}">
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ post.author }}</a></span><br/>
+                <span class="post-name"><a target="_blank" href="https://www.gravatar.com/{{ post.author_email | to_hash }}">{{ post.author }}</a></span><br/>
                 {% endif %}
                 <span class="post-date">{{ post.date | date_to_string }}</span>
                 </span>
